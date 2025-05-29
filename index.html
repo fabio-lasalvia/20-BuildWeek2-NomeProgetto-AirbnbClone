@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caricaAirbnbHome</title>
+</head>
+
+<body>
+
+
+    <!-- Carico il mio JS -->
+    <script>// Gestione caricamento pagine
+        const PATH_PAGINA_AIRBNB = "airbnbHome.html";
+
+        function caricaAirbnbHome() {
+            console.log("Funzione caricaPaginaAirbnb eseguita!");
+            caricaPagina(PATH_PAGINA_AIRBNB);
+        }
+
+        function caricaPagina(pagina) {
+            // console.log("caricaPagina ", pagina)
+            window.location.replace(pagina);
+        }</script>
+
+    <!-- Eseguo in base al mio JS -->
+    <script>
+        window.onload = () => {
+            caricaAirbnbHome()
+        }
+    </script>
+</body>
+
+</html>
