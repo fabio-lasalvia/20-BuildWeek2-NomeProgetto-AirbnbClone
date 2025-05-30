@@ -28,3 +28,11 @@ function decrementaOspite(type) {
     document.getElementById(`${type}Count`).textContent = ospiti[type];
   }
 }
+
+//Script per sovrascrivere il comportamento di Bootstrap che chiude i dropdown item al click
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".dropdown-menu button").forEach((btn) => {
+    btn.addEventListener("click", (e) => e.stopPropagation());
+  });
+});
