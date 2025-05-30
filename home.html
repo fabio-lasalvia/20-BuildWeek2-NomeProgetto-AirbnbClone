@@ -12,457 +12,775 @@
 
 <body>
 
-    <main id="theMain">
+    <header class="header fixed-top shadow-sm py-md-4">
+        <div class="container-fluid d-flex flex-column align-items-center">
 
-        <section id="Roma">
-            <div class="d-flex align-items-center justify-content-between mb-1 px-3">
-                <h5>Roma: alloggi popolari &rsaquo;</h5>
+            <div class="d-flex justify-content-between align-items-center w-100 flex-grow-1">
 
-                <div class="arrow-buttons">
-                    <button class="carousel-arrow left-arrow btn btn-outline-dark"
-                        style="border-radius: 50%;">&#10094;</button>
-                    <button class="carousel-arrow right-arrow btn btn-outline-dark"
-                        style="border-radius: 50%;">&#10095;</button>
+                <!-- LOGO - SINISTRA -->
+                <div id="logo">
+                    <img src="img/logo/logo-pink.png" alt="Airbnb Logo" class="img-fluid logo-img">
+                </div>
+
+                <!-- SEZIONE TRE ICONE - CENTRALE -->
+                <nav class="navbar navbar-expand p-0 header-nav d-none d-md-flex" id="headerNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-4">
+
+                        <!-- ALLOGGI -->
+                        <li class="nav-item">
+                            <a class="nav-link text-dark fw-semibold d-flex flex-column align-items-center" href="#">
+                                <img src="img/icone/iconaCasa.png" alt="" class="nav-icon">
+                                <span>Alloggi</span>
+                            </a>
+                        </li>
+
+                        <!-- ESPERIENZE -->
+                        <li class="nav-item position-relative">
+                            <a class="nav-link text-dark fw-semibold d-flex flex-column align-items-center" href="#">
+                                <img src="img/icone/iconaMongolfiera.png" alt="" class="nav-icon">
+                                <span>Esperienze</span>
+                                <span
+                                    class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle custom-badge">NOVITÀ</span>
+                            </a>
+                        </li>
+
+                        <!-- SERVIZI -->
+                        <li class="nav-item position-relative">
+                            <a class="nav-link text-dark fw-semibold d-flex flex-column align-items-center" href="#">
+                                <img src="img/icone/iconaCampanella.png" alt="" class="nav-icon">
+                                <span>Servizi</span>
+                                <span
+                                    class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle custom-badge">NOVITÀ</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- COLLEGAMENTI - DESTRA -->
+                <div class="d-flex align-items-center gap-2">
+
+                    <!-- INIZIA A OSPITARE -->
+                    <button class="btn btn-light rounded-pill fw-semibold py-2 px-3 d-none d-md-block">Inizia a
+                        ospitare</button>
+
+                    <div class="dropdown d-flex">
+                        <!-- BTN GLOBE -->
+                        <button class="btn btn-light border rounded-pill d-flex align-items-center gap-2 py-2 px-3"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a href="#" class="text-black"><i class="bi bi-globe fs-5"></i></a>
+                        </button>
+
+                        <!-- BTN LISTA -->
+                        <button class="btn btn-light border rounded-pill d-flex align-items-center gap-2 py-2 px-3"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a href="#" class="text-black"><i class="bi bi-list fs-5"></i></a>
+                        </button>
+
+                        <!-- MENU DROPDOWN - COLLEGAMENTI -->
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-question-circle"></i> Centro
+                                    assistenza</a></li>
+                            <li><a class="dropdown-item" href="#">Inizia a ospitare <img src="img/icone/iconaCasa.png"
+                                        alt="Icona Casa"></a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Trova un co-host</a></li>
+                            <li><a class="dropdown-item" href="#">Gift card</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Accedi o registrati</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <!--sezione 1-->
-            <div class="carousel-wrapper position-relative">
-                <div class="scroll-row d-flex gap-2 px-3">
-                    <div class="scroll-card" id="1">
-                        <span class="heart-icon">
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
-                                style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
-                                <path style="fill: rgb(255, 255, 255);"
-                                    d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
-                                    fill="#000002"></path>
-                            </svg>
-                        </span>
-                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQwMTI5MTU4NzQ1MjY1ODU2NA==/original/4d524189-fec7-4b2e-91a9-ebfa76096f8d.jpeg?im_w=720"
-                            class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
-                        <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Appartamento • Roma</p>
-                        <p class="text-muted mb-0" style="font-size: 0.75em;">29-31 ago • Host privato</p>
-                        <p class="text-muted" style="font-size: 0.75em;">135€ per 2 notti • &starf; 5</p>
-                    </div>
-                    <div class="scroll-card" id="2">
-                        <span class="heart-icon">
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
-                                style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
-                                <path style="fill: rgb(255, 255, 255);"
-                                    d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
-                                    fill="#000002"></path>
-                            </svg>
-                        </span>
-                        <img src="https://a0.muscache.com/im/pictures/airflow/Hosting-13876513/original/9fafb4f9-8e15-45b7-ab1e-541760b4a9a4.jpg?im_w=1200"
-                            class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
-                        <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Appartamento • Tuscolano</p>
-                        <p class="text-muted mb-0" style="font-size: 0.75em;">12-14 dic • Host privato</p>
-                        <p class="text-muted" style="font-size: 0.75em;">188€ per 2 notti • &starf; 4,86</p>
-                    </div>
-                    <div class="scroll-card" id="3">
-                        <span class="heart-icon">
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
-                                style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
-                                <path style="fill: rgb(255, 255, 255);"
-                                    d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
-                                    fill="#000002"></path>
-                            </svg>
-                        </span>
-                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-917861/original/11d5ae9b-8d8a-4e07-b560-4402b97e1604.jpeg?im_w=1200"
-                            class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
-                        <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Esquilino</p>
-                        <p class="text-muted mb-0" style="font-size: 0.75em;">24-26 ott • Host privato</p>
-                        <p class="text-muted" style="font-size: 0.75em;">161€ per 2 notti • &starf; 4,85</p>
-                    </div>
-                    <div class="scroll-card" id="4">
-                        <span class="heart-icon">
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
-                                style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
-                                <path style="fill: rgb(255, 255, 255);"
-                                    d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
-                                    fill="#000002"></path>
-                            </svg>
-                        </span>
-                        <img src="https://a0.muscache.com/im/pictures/f52319c4-778e-4696-ac35-2daeef69fabf.jpg?im_w=1200"
-                            class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
-                        <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Appartamento • Monti</p>
-                        <p class="text-muted mb-0" style="font-size: 0.75em;">31 ott-02 nov • Host privato</p>
-                        <p class="text-muted" style="font-size: 0.75em;">265€ per 2 notti • &starf; 4,8</p>
-                    </div>
-                    <div class="scroll-card">
-                        <span class="heart-icon">
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
-                                style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
-                                <path style="fill: rgb(255, 255, 255);"
-                                    d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
-                                    fill="#000002"></path>
-                            </svg>
-                        </span>
-                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-4480304/original/3b4f5aa2-6f78-4d8d-93c0-8aa971c5b60e.jpeg?im_w=1200"
-                            class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
-                        <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Prati</p>
-                        <p class="text-muted mb-0" style="font-size: 0.75em;">07-09 nov • Host privato</p>
-                        <p class="text-muted" style="font-size: 0.75em;">194€ per 2 notti • &starf; 4,9</p>
-                    </div>
-                    <div class="scroll-card">
-                        <span class="heart-icon">
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
-                                style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
-                                <path style="fill: rgb(255, 255, 255);"
-                                    d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
-                                    fill="#000002"></path>
-                            </svg>
-                        </span>
-                        <img src="https://a0.muscache.com/im/pictures/pro_photo_tool/Hosting-38019110-unapproved/original/36adcca5-2c2e-4f81-a78d-ed699c69b1fd.JPEG?im_w=720"
-                            class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
-                        <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Roma</p>
-                        <p class="text-muted mb-0" style="font-size: 0.75em;">22-24 ago • Host privato</p>
-                        <p class="text-muted" style="font-size: 0.75em;">101€ per 2 notti • &starf; 4,73</p>
-                    </div>
-                    <div class="scroll-card">
-                        <span class="heart-icon">
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
-                                style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
-                                <path style="fill: rgb(255, 255, 255);"
-                                    d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
-                                    fill="#000002"></path>
-                            </svg>
-                        </span>
-                        <img src="https://a0.muscache.com/im/pictures/airflow/Hosting-14605694/original/b4673c58-289c-4190-b21e-7573e640370b.jpg?im_w=720"
-                            class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
-                        <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Appartamento • Tuscolano</p>
-                        <p class="text-muted mb-0" style="font-size: 0.75em;">28-30 nov • Host privato</p>
-                        <p class="text-muted" style="font-size: 0.75em;">188€ per 2 notti • &starf; 4,82</p>
-                    </div>
-                    <div class="scroll-card">
-                        <span class="heart-icon">
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
-                                style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
-                                <path style="fill: rgb(255, 255, 255);"
-                                    d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
-                                    fill="#000002"></path>
-                            </svg>
-                        </span>
-                        <img src="https://a0.muscache.com/im/pictures/ddf5b4e6-f179-49a5-b544-170d517eb788.jpg?im_w=720"
-                            class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
-                        <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Monti</p>
-                        <p class="text-muted mb-0" style="font-size: 0.75em;">22-24 ago • Host privato</p>
-                        <p class="text-muted" style="font-size: 0.75em;">141€ per 2 notti • &starf; 4,95</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <!-- SEARCHBAR PER DESKTOP -->
+            <div class="search-bar-desktop mt-4 d-none d-md-block" id="searchBarDesktop">
+                <div class="d-flex align-items-center bg-white border rounded-pill shadow p-2">
 
-        <!--sezione numero 2-->
+                    <!-- SEZIONE DOVE -->
+                    <div class="search-field p-2 border-end dropdown">
+                        <label class="d-block fw-bold text-dark search-label">Dove</label>
+                        <input type="text" class="form-control-plaintext p-0 dropdown-toggle" data-bs-toggle="dropdown"
+                            placeholder="Cerca destinazioni" readonly>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-compass-fill"></i> Nelle vicinanze</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-landmark"></i> Roma</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-vihara"></i> Shanghai</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gopuram"></i> Chichén Itzá</a>
+                            </li>
+                        </ul>
+                    </div>
 
-        <section id="Parigi">
-            <div class="d-flex align-items-center justify-content-between mb-1 px-3">
-                <h5>Parigi: alloggi &rsaquo;</h5>
+                    <!-- SEZIONE CHECK-IN -->
+                    <div class="search-field p-2 border-end dropdown">
+                        <label class="d-block fw-bold text-dark search-label">Check-in</label>
+                        <input type="text" class="form-control-plaintext p-0 dropdown-toggle" data-bs-toggle="dropdown"
+                            placeholder="Aggiungi date" readonly>
+                        <div class="dropdown-menu p-3" style="min-width: 300px;">
+                            <!-- Qui puoi mettere un datepicker -->
+                            <p class="mb-0 text-muted">Seleziona la data di check-in</p>
+                        </div>
+                    </div>
 
-                <div class="arrow-buttons">
-                    <button class="carousel-arrow left-arrow btn btn-outline-dark"
-                        style="border-radius: 50%;">&#10094;</button>
-                    <button class="carousel-arrow right-arrow btn btn-outline-dark"
-                        style="border-radius: 50%;">&#10095;</button>
+                    <!-- SEZIONE CHECK-OUT -->
+                    <div class="search-field p-2 border-end dropdown">
+                        <label class="d-block fw-bold text-dark search-label">Check-out</label>
+                        <input type="text" class="form-control-plaintext p-0 dropdown-toggle" data-bs-toggle="dropdown"
+                            placeholder="Aggiungi date" readonly>
+                        <div class="dropdown-menu p-3" style="min-width: 300px;">
+                            <!-- Anche qui un datepicker -->
+                            <p class="mb-0 text-muted">Seleziona la data di check-out</p>
+                        </div>
+                    </div>
+
+                    <!-- SEZIONE CHI -->
+                    <div class="search-field guest-field p-2 dropdown">
+                        <label class="d-block fw-bold text-dark search-label">Chi</label>
+                        <input type="text" class="form-control-plaintext p-0 dropdown-toggle" data-bs-toggle="dropdown"
+                            placeholder="Aggiungi ospiti" readonly>
+                        <div class="dropdown-menu p-3" style="min-width: 250px;">
+
+                            <!-- Adulti -->
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <div>
+                                    <div class="fw-bold">Adulti</div>
+                                    <div class="text-muted" style="font-size: 0.85rem;">Età 13 o più</div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <button class="btn btn-outline-secondary btn-sm px-2"
+                                        onclick="decrementaOspite('adulti')">-</button>
+                                    <span id="adultiCount" class="mx-2">2</span>
+                                    <button class="btn btn-outline-secondary btn-sm px-2"
+                                        onclick="incrementaOspite('adulti')">+</button>
+                                </div>
+                            </div>
+
+                            <!-- Bambini -->
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="fw-bold">Bambini</div>
+                                    <div class="text-muted" style="font-size: 0.85rem;">Età 2-12</div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <button class="btn btn-outline-secondary btn-sm px-2"
+                                        onclick="decrementaOspite('bambini')">-</button>
+                                    <span id="bambiniCount" class="mx-2">0</span>
+                                    <button class="btn btn-outline-secondary btn-sm px-2"
+                                        onclick="incrementaOspite('bambini')">+</button>
+                                </div>
+                            </div>
+
+                            <!-- Animali domestici -->
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="fw-bold">Animali domestici</div>
+                                    <div class="text-muted" style="font-size: 0.85rem;"><a href="#"
+                                            class="text-secondary">Viaggi con un animale di servizio?</a></div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <button class="btn btn-outline-secondary btn-sm px-2"
+                                        onclick="decrementaOspite('animaliDomestici')">-</button>
+                                    <span id="animaliDomesticiCount" class="mx-2">0</span>
+                                    <button class="btn btn-outline-secondary btn-sm px-2"
+                                        onclick="incrementaOspite('animaliDomestici')">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BOTTONE CERCA -->
+                    <button
+                        class="btn btn-danger rounded-circle p-0 d-flex justify-content-center align-items-center flex-shrink-0 ms-auto me-1 search-btn">
+                        <i class="bi bi-search text-white search-icon"></i>
+                    </button>
                 </div>
             </div>
 
-            <div class="carousel-wrapper position-relative">
-                <div class="scroll-row d-flex gap-2 px-3">
-                    <div class="scroll-card">
-                        <span class="heart-icon">
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
-                                style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
-                                <path style="fill: rgb(255, 255, 255);"
-                                    d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
-                                    fill="#000002"></path>
-                            </svg>
-                        </span>
-                        <img src="https://a0.muscache.com/im/pictures/f4ce0acb-3a1e-4d64-84a1-54568a1b1b58.jpg?im_w=1200"
-                            class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
-                        <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Courbevoie</p>
-                        <p class="text-muted mb-0" style="font-size: 0.75em;">08-10 ago • Host privato</p>
-                        <p class="text-muted" style="font-size: 0.75em;">92€ per 2 notti • &starf; 4,85</p>
-                    </div>
-                    <div class="scroll-card">
-                        <span class="heart-icon">
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
-                                style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
-                                <path style="fill: rgb(255, 255, 255);"
-                                    d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
-                                    fill="#000002"></path>
-                            </svg>
-                        </span>
-                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6ODYwNjYzOTQzOTMxOTQ5NDc0/original/4f625642-5682-40fd-84fa-a5d7d2cf8deb.jpeg?im_w=1200"
-                            class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
-                        <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Appartamento •<br> Gennevilliers
-                        </p>
-                        <p class="text-muted mb-0" style="font-size: 0.75em;">17-19 ott • Host privato</p>
-                        <p class="text-muted" style="font-size: 0.75em;">147€ per 2 notti • &starf; 4,96</p>
-                    </div>
-                    <div class="scroll-card">
-                        <span class="heart-icon">
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
-                                style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
-                                <path style="fill: rgb(255, 255, 255);"
-                                    d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
-                                    fill="#000002"></path>
-                            </svg>
-                        </span>
-                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1039152633535687791/original/2a06af1a-df71-4cd5-9246-f440f544c0fb.jpeg?im_w=1200"
-                            class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
-                        <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Parigi</p>
-                        <p class="text-muted mb-0" style="font-size: 0.75em;">02-04 gen • Host privato</p>
-                        <p class="text-muted" style="font-size: 0.75em;">155€ per 2 notti • &starf; 4,9</p>
-                    </div>
-                    <div class="scroll-card">
-                        <span class="heart-icon">
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
-                                style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
-                                <path style="fill: rgb(255, 255, 255);"
-                                    d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
-                                    fill="#000002"></path>
-                            </svg>
-                        </span>
-                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1376262311232651616/original/fc42a63f-cee0-4354-97df-0e58b199c197.jpeg?im_w=1200"
-                            class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
-                        <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Parigi</p>
-                        <p class="text-muted mb-0" style="font-size: 0.75em;">05-07 set • Host privato</p>
-                        <p class="text-muted" style="font-size: 0.75em;">107€ per 2 notti • &starf; 4,95</p>
-                    </div>
-                    <div class="scroll-card">
-                        <span class="heart-icon">
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
-                                style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
-                                <path style="fill: rgb(255, 255, 255);"
-                                    d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
-                                    fill="#000002"></path>
-                            </svg>
-                        </span>
-                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NzI4Njc0MzU4OTIwMzE3Mzcz/original/8cade32e-fb7c-4f2c-a4a5-c73ff513d704.jpeg?im_w=1200"
-                            class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
-                        <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Parigi</p>
-                        <p class="text-muted mb-0" style="font-size: 0.75em;">19-21 set • Host privato</p>
-                        <p class="text-muted" style="font-size: 0.75em;">137€ per 2 notti • &starf; 4,9</p>
-                    </div>
-                    <div class="scroll-card">
-                        <span class="heart-icon">
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
-                                style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
-                                <path style="fill: rgb(255, 255, 255);"
-                                    d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
-                                    fill="#000002"></path>
-                            </svg>
-                        </span>
-                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1395637668230864042/original/80acb8c8-8ef9-416c-8a9c-4591c40d50fa.jpeg?im_w=1200"
-                            class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
-                        <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Clishy</p>
-                        <p class="text-muted mb-0" style="font-size: 0.75em;">18-20 lug • Host privato</p>
-                        <p class="text-muted" style="font-size: 0.75em;">101€ per 2 notti • &starf; 5</p>
-                    </div>
-                    <div class="scroll-card">
-                        <span class="heart-icon">
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
-                                style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
-                                <path style="fill: rgb(255, 255, 255);"
-                                    d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
-                                    fill="#000002"></path>
-                            </svg>
-                        </span>
-                        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1169138340928431577/original/b9a64c58-7dad-409b-a0ca-0fec204913bc.jpeg?im_w=1200"
-                            class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
-                        <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Parigi</p>
-                        <p class="text-muted mb-0" style="font-size: 0.75em;">02-04 gen • Host privato</p>
-                        <p class="text-muted" style="font-size: 0.75em;">131€ per 2 notti • &starf; 4,96</p>
-                    </div>
-                    <div class="scroll-card">
-                        <span class="heart-icon">
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
-                                style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
-                                <path style="fill: rgb(255, 255, 255);"
-                                    d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
-                                    fill="#000002"></path>
-                            </svg>
-                        </span>
-                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1086006856265662161/original/a53b1f72-ce3f-4556-adc5-4985221bfe04.jpeg?im_w=720"
-                            class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
-                        <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Parigi</p>
-                        <p class="text-muted mb-0" style="font-size: 0.75em;">22-24 ago • Host privato</p>
-                        <p class="text-muted" style="font-size: 0.75em;">161€ per 2 notti • &starf; 4,85</p>
-                    </div>
+
+            <!-- SEARCHBAR PER MOBILE -->
+            <div class="search-bar-mobile d-md-none mt-2 w-100" id="searchBarMobile">
+                <div class="d-flex align-items-center bg-white border rounded-pill shadow-sm p-2 w-100">
+                    <button class="btn p-0 me-2" type="button">
+                        <i class="bi bi-search text-dark mobile-search-icon"></i>
+                    </button>
+                    <input type="text" class="form-control-plaintext p-0 fw-semibold text-dark flex-grow-1"
+                        placeholder="Dove vuoi andare?">
+                    <button class="btn btn-light rounded-circle border p-1 ms-2" type="button">
+                        <i class="bi bi-sliders text-dark mobile-filter-icon"></i>
+                    </button>
                 </div>
             </div>
-        </section>
+        </div>
+    </header>
 
-        <!--sezione numero 3-->
+    <section id="mainFooter">
 
-        <section id="Londra">
-            <div class="d-flex align-items-center justify-content-between mb-1 px-3">
-                <h5>Londra: tutti gli alloggi disponibili &rsaquo;</h5>
+        <main id="theMain">
 
-                <div class="arrow-buttons">
-                    <button class="carousel-arrow left-arrow btn btn-outline-dark"
-                        style="border-radius: 50%;">&#10094;</button>
-                    <button class="carousel-arrow right-arrow btn btn-outline-dark"
-                        style="border-radius: 50%;">&#10095;</button>
-                </div>
-            </div>
+            <section id="Roma">
+                <div class="d-flex align-items-center justify-content-between mb-1 px-3">
+                    <h5>Roma: alloggi popolari &rsaquo;</h5>
 
-            <div class="carousel-wrapper position-relative">
-                <div class="scroll-row d-flex gap-2 px-3">
-                    <div class="scroll-card">
-                        <span class="heart-icon">
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
-                                style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
-                                <path style="fill: rgb(255, 255, 255);"
-                                    d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
-                                    fill="#000002"></path>
-                            </svg>
-                        </span>
-                        <img src="https://a0.muscache.com/im/pictures/airflow/Hosting-36721378/original/9870927f-df40-4117-a18a-70f0c1cacc02.jpg?im_w=1200"
-                            class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
-                        <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a West Ham</p>
-                        <p class="text-muted mb-0" style="font-size: 0.75em;">29-31 ago • Host privato</p>
-                        <p class="text-muted" style="font-size: 0.75em;">74€ per 2 notti • &starf; 4,78</p>
-                    </div>
-                    <div class="scroll-card">
-                        <span class="heart-icon">
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
-                                style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
-                                <path style="fill: rgb(255, 255, 255);"
-                                    d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
-                                    fill="#000002"></path>
-                            </svg>
-                        </span>
-                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTM0MDU0MzU0MTI0MDc4Mjc0Nw==/original/325db7c8-314a-4c2d-bae4-d9ac39574314.jpeg?im_w=1200"
-                            class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
-                        <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Kensal Green</p>
-                        <p class="text-muted mb-0" style="font-size: 0.75em;">12-14 set • Host privato</p>
-                        <p class="text-muted" style="font-size: 0.75em;">129€ per 2 notti • &starf; 5</p>
-                    </div>
-                    <div class="scroll-card">
-                        <span class="heart-icon">
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
-                                style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
-                                <path style="fill: rgb(255, 255, 255);"
-                                    d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
-                                    fill="#000002"></path>
-                            </svg>
-                        </span>
-                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-29030448/original/0628cd79-f3e1-48cf-ba49-afa5d47c15ed.jpeg?im_w=1200"
-                            class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
-                        <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Hacney</p>
-                        <p class="text-muted mb-0" style="font-size: 0.75em;">02-04 gen • Host privato</p>
-                        <p class="text-muted" style="font-size: 0.75em;">84€ per 2 notti • &starf; 4,88</p>
-                    </div>
-                    <div class="scroll-card">
-                        <span class="heart-icon">
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
-                                style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
-                                <path style="fill: rgb(255, 255, 255);"
-                                    d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
-                                    fill="#000002"></path>
-                            </svg>
-                        </span>
-                        <img src="https://a0.muscache.com/im/pictures/0cb29eec-d24d-4508-ac87-5b6853a1a5db.jpg?im_w=1200"
-                            class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
-                        <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Wandsworth</p>
-                        <p class="text-muted mb-0" style="font-size: 0.75em;">05-07 set • Host privato</p>
-                        <p class="text-muted" style="font-size: 0.75em;">107€ per 2 notti • &starf; 4,95</p>
-                    </div>
-                    <div class="scroll-card">
-                        <span class="heart-icon">
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
-                                style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
-                                <path style="fill: rgb(255, 255, 255);"
-                                    d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
-                                    fill="#000002"></path>
-                            </svg>
-                        </span>
-                        <img src="https://a0.muscache.com/im/pictures/airflow/Hosting-2524440/original/85576ecf-9476-44a4-8374-82195ad7c3ba.jpg?im_w=1200"
-                            class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
-                        <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Londra</p>
-                        <p class="text-muted mb-0" style="font-size: 0.75em;">10-12 ott • Host privato</p>
-                        <p class="text-muted" style="font-size: 0.75em;">135€ per 2 notti • &starf; 4,95</p>
-                    </div>
-                    <div class="scroll-card">
-                        <span class="heart-icon">
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
-                                style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
-                                <path style="fill: rgb(255, 255, 255);"
-                                    d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
-                                    fill="#000002"></path>
-                            </svg>
-                        </span>
-                        <img src="https://a0.muscache.com/im/pictures/2a466bb0-5738-47d1-b42b-345da9dadd3a.jpg?im_w=1200"
-                            class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
-                        <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Sautwark</p>
-                        <p class="text-muted mb-0" style="font-size: 0.75em;">10-12 ott • Host privato</p>
-                        <p class="text-muted" style="font-size: 0.75em;">155€ per 2 notti • &starf; 4,94</p>
-                    </div>
-                    <div class="scroll-card">
-                        <span class="heart-icon">
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
-                                style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
-                                <path style="fill: rgb(255, 255, 255);"
-                                    d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
-                                    fill="#000002"></path>
-                            </svg>
-                        </span>
-                        <img src="https://a0.muscache.com/im/pictures/85008c96-0544-40eb-8d57-4f08660d8e23.jpg?im_w=1200"
-                            class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
-                        <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Sautwark</p>
-                        <p class="text-muted mb-0" style="font-size: 0.75em;">24-26 ott • Host privato</p>
-                        <p class="text-muted" style="font-size: 0.75em;">141€ per 2 notti • &starf; 4,95</p>
-                    </div>
-                    <div class="scroll-card">
-                        <span class="heart-icon">
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
-                                style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
-                                <path style="fill: rgb(255, 255, 255);"
-                                    d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
-                                    fill="#000002"></path>
-                            </svg>
-                        </span>
-                        <img src="https://a0.muscache.com/im/pictures/98485873/a4ae58aa_original.jpg?im_w=1200"
-                            class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
-                        <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Appartamento • Londra</p>
-                        <p class="text-muted mb-0" style="font-size: 0.75em;">06-08 mar • Host privato</p>
-                        <p class="text-muted" style="font-size: 0.75em;">179€ per 2 notti • &starf; 4,79</p>
+                    <div class="arrow-buttons">
+                        <button class="carousel-arrow left-arrow btn btn-outline-dark"
+                            style="border-radius: 50%;">&#10094;</button>
+                        <button class="carousel-arrow right-arrow btn btn-outline-dark"
+                            style="border-radius: 50%;">&#10095;</button>
                     </div>
                 </div>
+
+                <!--sezione 1-->
+                <div class="carousel-wrapper position-relative">
+                    <div class="scroll-row d-flex gap-2 px-3">
+                        <div class="scroll-card" id="1">
+                            <span class="heart-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
+                                    style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
+                                    <path style="fill: rgb(255, 255, 255);"
+                                        d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
+                                        fill="#000002"></path>
+                                </svg>
+                            </span>
+                            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQwMTI5MTU4NzQ1MjY1ODU2NA==/original/4d524189-fec7-4b2e-91a9-ebfa76096f8d.jpeg?im_w=720"
+                                class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
+                            <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Appartamento • Roma</p>
+                            <p class="text-muted mb-0" style="font-size: 0.75em;">29-31 ago • Host privato</p>
+                            <p class="text-muted" style="font-size: 0.75em;">135€ per 2 notti • &starf; 5</p>
+                        </div>
+                        <div class="scroll-card" id="2">
+                            <span class="heart-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
+                                    style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
+                                    <path style="fill: rgb(255, 255, 255);"
+                                        d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
+                                        fill="#000002"></path>
+                                </svg>
+                            </span>
+                            <img src="https://a0.muscache.com/im/pictures/airflow/Hosting-13876513/original/9fafb4f9-8e15-45b7-ab1e-541760b4a9a4.jpg?im_w=1200"
+                                class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
+                            <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Appartamento • Tuscolano</p>
+                            <p class="text-muted mb-0" style="font-size: 0.75em;">12-14 dic • Host privato</p>
+                            <p class="text-muted" style="font-size: 0.75em;">188€ per 2 notti • &starf; 4,86</p>
+                        </div>
+                        <div class="scroll-card" id="3">
+                            <span class="heart-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
+                                    style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
+                                    <path style="fill: rgb(255, 255, 255);"
+                                        d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
+                                        fill="#000002"></path>
+                                </svg>
+                            </span>
+                            <img src="https://a0.muscache.com/im/pictures/miso/Hosting-917861/original/11d5ae9b-8d8a-4e07-b560-4402b97e1604.jpeg?im_w=1200"
+                                class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
+                            <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Esquilino</p>
+                            <p class="text-muted mb-0" style="font-size: 0.75em;">24-26 ott • Host privato</p>
+                            <p class="text-muted" style="font-size: 0.75em;">161€ per 2 notti • &starf; 4,85</p>
+                        </div>
+                        <div class="scroll-card" id="4">
+                            <span class="heart-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
+                                    style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
+                                    <path style="fill: rgb(255, 255, 255);"
+                                        d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
+                                        fill="#000002"></path>
+                                </svg>
+                            </span>
+                            <img src="https://a0.muscache.com/im/pictures/f52319c4-778e-4696-ac35-2daeef69fabf.jpg?im_w=1200"
+                                class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
+                            <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Appartamento • Monti</p>
+                            <p class="text-muted mb-0" style="font-size: 0.75em;">31 ott-02 nov • Host privato</p>
+                            <p class="text-muted" style="font-size: 0.75em;">265€ per 2 notti • &starf; 4,8</p>
+                        </div>
+                        <div class="scroll-card">
+                            <span class="heart-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
+                                    style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
+                                    <path style="fill: rgb(255, 255, 255);"
+                                        d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
+                                        fill="#000002"></path>
+                                </svg>
+                            </span>
+                            <img src="https://a0.muscache.com/im/pictures/miso/Hosting-4480304/original/3b4f5aa2-6f78-4d8d-93c0-8aa971c5b60e.jpeg?im_w=1200"
+                                class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
+                            <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Prati</p>
+                            <p class="text-muted mb-0" style="font-size: 0.75em;">07-09 nov • Host privato</p>
+                            <p class="text-muted" style="font-size: 0.75em;">194€ per 2 notti • &starf; 4,9</p>
+                        </div>
+                        <div class="scroll-card">
+                            <span class="heart-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
+                                    style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
+                                    <path style="fill: rgb(255, 255, 255);"
+                                        d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
+                                        fill="#000002"></path>
+                                </svg>
+                            </span>
+                            <img src="https://a0.muscache.com/im/pictures/pro_photo_tool/Hosting-38019110-unapproved/original/36adcca5-2c2e-4f81-a78d-ed699c69b1fd.JPEG?im_w=720"
+                                class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
+                            <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Roma</p>
+                            <p class="text-muted mb-0" style="font-size: 0.75em;">22-24 ago • Host privato</p>
+                            <p class="text-muted" style="font-size: 0.75em;">101€ per 2 notti • &starf; 4,73</p>
+                        </div>
+                        <div class="scroll-card">
+                            <span class="heart-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
+                                    style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
+                                    <path style="fill: rgb(255, 255, 255);"
+                                        d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
+                                        fill="#000002"></path>
+                                </svg>
+                            </span>
+                            <img src="https://a0.muscache.com/im/pictures/airflow/Hosting-14605694/original/b4673c58-289c-4190-b21e-7573e640370b.jpg?im_w=720"
+                                class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
+                            <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Appartamento • Tuscolano</p>
+                            <p class="text-muted mb-0" style="font-size: 0.75em;">28-30 nov • Host privato</p>
+                            <p class="text-muted" style="font-size: 0.75em;">188€ per 2 notti • &starf; 4,82</p>
+                        </div>
+                        <div class="scroll-card">
+                            <span class="heart-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
+                                    style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
+                                    <path style="fill: rgb(255, 255, 255);"
+                                        d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
+                                        fill="#000002"></path>
+                                </svg>
+                            </span>
+                            <img src="https://a0.muscache.com/im/pictures/ddf5b4e6-f179-49a5-b544-170d517eb788.jpg?im_w=720"
+                                class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
+                            <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Monti</p>
+                            <p class="text-muted mb-0" style="font-size: 0.75em;">22-24 ago • Host privato</p>
+                            <p class="text-muted" style="font-size: 0.75em;">141€ per 2 notti • &starf; 4,95</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--sezione numero 2-->
+
+            <section id="Parigi">
+                <div class="d-flex align-items-center justify-content-between mb-1 px-3">
+                    <h5>Parigi: alloggi &rsaquo;</h5>
+
+                    <div class="arrow-buttons">
+                        <button class="carousel-arrow left-arrow btn btn-outline-dark"
+                            style="border-radius: 50%;">&#10094;</button>
+                        <button class="carousel-arrow right-arrow btn btn-outline-dark"
+                            style="border-radius: 50%;">&#10095;</button>
+                    </div>
+                </div>
+
+                <div class="carousel-wrapper position-relative">
+                    <div class="scroll-row d-flex gap-2 px-3">
+                        <div class="scroll-card">
+                            <span class="heart-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
+                                    style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
+                                    <path style="fill: rgb(255, 255, 255);"
+                                        d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
+                                        fill="#000002"></path>
+                                </svg>
+                            </span>
+                            <img src="https://a0.muscache.com/im/pictures/f4ce0acb-3a1e-4d64-84a1-54568a1b1b58.jpg?im_w=1200"
+                                class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
+                            <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Courbevoie</p>
+                            <p class="text-muted mb-0" style="font-size: 0.75em;">08-10 ago • Host privato</p>
+                            <p class="text-muted" style="font-size: 0.75em;">92€ per 2 notti • &starf; 4,85</p>
+                        </div>
+                        <div class="scroll-card">
+                            <span class="heart-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
+                                    style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
+                                    <path style="fill: rgb(255, 255, 255);"
+                                        d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
+                                        fill="#000002"></path>
+                                </svg>
+                            </span>
+                            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6ODYwNjYzOTQzOTMxOTQ5NDc0/original/4f625642-5682-40fd-84fa-a5d7d2cf8deb.jpeg?im_w=1200"
+                                class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
+                            <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Appartamento •<br> Gennevilliers
+                            </p>
+                            <p class="text-muted mb-0" style="font-size: 0.75em;">17-19 ott • Host privato</p>
+                            <p class="text-muted" style="font-size: 0.75em;">147€ per 2 notti • &starf; 4,96</p>
+                        </div>
+                        <div class="scroll-card">
+                            <span class="heart-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
+                                    style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
+                                    <path style="fill: rgb(255, 255, 255);"
+                                        d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
+                                        fill="#000002"></path>
+                                </svg>
+                            </span>
+                            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1039152633535687791/original/2a06af1a-df71-4cd5-9246-f440f544c0fb.jpeg?im_w=1200"
+                                class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
+                            <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Parigi</p>
+                            <p class="text-muted mb-0" style="font-size: 0.75em;">02-04 gen • Host privato</p>
+                            <p class="text-muted" style="font-size: 0.75em;">155€ per 2 notti • &starf; 4,9</p>
+                        </div>
+                        <div class="scroll-card">
+                            <span class="heart-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
+                                    style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
+                                    <path style="fill: rgb(255, 255, 255);"
+                                        d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
+                                        fill="#000002"></path>
+                                </svg>
+                            </span>
+                            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1376262311232651616/original/fc42a63f-cee0-4354-97df-0e58b199c197.jpeg?im_w=1200"
+                                class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
+                            <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Parigi</p>
+                            <p class="text-muted mb-0" style="font-size: 0.75em;">05-07 set • Host privato</p>
+                            <p class="text-muted" style="font-size: 0.75em;">107€ per 2 notti • &starf; 4,95</p>
+                        </div>
+                        <div class="scroll-card">
+                            <span class="heart-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
+                                    style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
+                                    <path style="fill: rgb(255, 255, 255);"
+                                        d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
+                                        fill="#000002"></path>
+                                </svg>
+                            </span>
+                            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NzI4Njc0MzU4OTIwMzE3Mzcz/original/8cade32e-fb7c-4f2c-a4a5-c73ff513d704.jpeg?im_w=1200"
+                                class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
+                            <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Parigi</p>
+                            <p class="text-muted mb-0" style="font-size: 0.75em;">19-21 set • Host privato</p>
+                            <p class="text-muted" style="font-size: 0.75em;">137€ per 2 notti • &starf; 4,9</p>
+                        </div>
+                        <div class="scroll-card">
+                            <span class="heart-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
+                                    style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
+                                    <path style="fill: rgb(255, 255, 255);"
+                                        d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
+                                        fill="#000002"></path>
+                                </svg>
+                            </span>
+                            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1395637668230864042/original/80acb8c8-8ef9-416c-8a9c-4591c40d50fa.jpeg?im_w=1200"
+                                class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
+                            <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Clishy</p>
+                            <p class="text-muted mb-0" style="font-size: 0.75em;">18-20 lug • Host privato</p>
+                            <p class="text-muted" style="font-size: 0.75em;">101€ per 2 notti • &starf; 5</p>
+                        </div>
+                        <div class="scroll-card">
+                            <span class="heart-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
+                                    style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
+                                    <path style="fill: rgb(255, 255, 255);"
+                                        d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
+                                        fill="#000002"></path>
+                                </svg>
+                            </span>
+                            <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1169138340928431577/original/b9a64c58-7dad-409b-a0ca-0fec204913bc.jpeg?im_w=1200"
+                                class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
+                            <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Parigi</p>
+                            <p class="text-muted mb-0" style="font-size: 0.75em;">02-04 gen • Host privato</p>
+                            <p class="text-muted" style="font-size: 0.75em;">131€ per 2 notti • &starf; 4,96</p>
+                        </div>
+                        <div class="scroll-card">
+                            <span class="heart-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
+                                    style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
+                                    <path style="fill: rgb(255, 255, 255);"
+                                        d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
+                                        fill="#000002"></path>
+                                </svg>
+                            </span>
+                            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1086006856265662161/original/a53b1f72-ce3f-4556-adc5-4985221bfe04.jpeg?im_w=720"
+                                class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
+                            <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Parigi</p>
+                            <p class="text-muted mb-0" style="font-size: 0.75em;">22-24 ago • Host privato</p>
+                            <p class="text-muted" style="font-size: 0.75em;">161€ per 2 notti • &starf; 4,85</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--sezione numero 3-->
+
+            <section id="Londra">
+                <div class="d-flex align-items-center justify-content-between mb-1 px-3">
+                    <h5>Londra: tutti gli alloggi disponibili &rsaquo;</h5>
+
+                    <div class="arrow-buttons">
+                        <button class="carousel-arrow left-arrow btn btn-outline-dark"
+                            style="border-radius: 50%;">&#10094;</button>
+                        <button class="carousel-arrow right-arrow btn btn-outline-dark"
+                            style="border-radius: 50%;">&#10095;</button>
+                    </div>
+                </div>
+
+                <div class="carousel-wrapper position-relative">
+                    <div class="scroll-row d-flex gap-2 px-3">
+                        <div class="scroll-card">
+                            <span class="heart-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
+                                    style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
+                                    <path style="fill: rgb(255, 255, 255);"
+                                        d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
+                                        fill="#000002"></path>
+                                </svg>
+                            </span>
+                            <img src="https://a0.muscache.com/im/pictures/airflow/Hosting-36721378/original/9870927f-df40-4117-a18a-70f0c1cacc02.jpg?im_w=1200"
+                                class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
+                            <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a West Ham</p>
+                            <p class="text-muted mb-0" style="font-size: 0.75em;">29-31 ago • Host privato</p>
+                            <p class="text-muted" style="font-size: 0.75em;">74€ per 2 notti • &starf; 4,78</p>
+                        </div>
+                        <div class="scroll-card">
+                            <span class="heart-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
+                                    style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
+                                    <path style="fill: rgb(255, 255, 255);"
+                                        d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
+                                        fill="#000002"></path>
+                                </svg>
+                            </span>
+                            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTM0MDU0MzU0MTI0MDc4Mjc0Nw==/original/325db7c8-314a-4c2d-bae4-d9ac39574314.jpeg?im_w=1200"
+                                class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
+                            <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Kensal Green</p>
+                            <p class="text-muted mb-0" style="font-size: 0.75em;">12-14 set • Host privato</p>
+                            <p class="text-muted" style="font-size: 0.75em;">129€ per 2 notti • &starf; 5</p>
+                        </div>
+                        <div class="scroll-card">
+                            <span class="heart-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
+                                    style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
+                                    <path style="fill: rgb(255, 255, 255);"
+                                        d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
+                                        fill="#000002"></path>
+                                </svg>
+                            </span>
+                            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-29030448/original/0628cd79-f3e1-48cf-ba49-afa5d47c15ed.jpeg?im_w=1200"
+                                class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
+                            <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Hacney</p>
+                            <p class="text-muted mb-0" style="font-size: 0.75em;">02-04 gen • Host privato</p>
+                            <p class="text-muted" style="font-size: 0.75em;">84€ per 2 notti • &starf; 4,88</p>
+                        </div>
+                        <div class="scroll-card">
+                            <span class="heart-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
+                                    style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
+                                    <path style="fill: rgb(255, 255, 255);"
+                                        d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
+                                        fill="#000002"></path>
+                                </svg>
+                            </span>
+                            <img src="https://a0.muscache.com/im/pictures/0cb29eec-d24d-4508-ac87-5b6853a1a5db.jpg?im_w=1200"
+                                class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
+                            <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Wandsworth</p>
+                            <p class="text-muted mb-0" style="font-size: 0.75em;">05-07 set • Host privato</p>
+                            <p class="text-muted" style="font-size: 0.75em;">107€ per 2 notti • &starf; 4,95</p>
+                        </div>
+                        <div class="scroll-card">
+                            <span class="heart-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
+                                    style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
+                                    <path style="fill: rgb(255, 255, 255);"
+                                        d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
+                                        fill="#000002"></path>
+                                </svg>
+                            </span>
+                            <img src="https://a0.muscache.com/im/pictures/airflow/Hosting-2524440/original/85576ecf-9476-44a4-8374-82195ad7c3ba.jpg?im_w=1200"
+                                class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
+                            <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Londra</p>
+                            <p class="text-muted mb-0" style="font-size: 0.75em;">10-12 ott • Host privato</p>
+                            <p class="text-muted" style="font-size: 0.75em;">135€ per 2 notti • &starf; 4,95</p>
+                        </div>
+                        <div class="scroll-card">
+                            <span class="heart-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
+                                    style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
+                                    <path style="fill: rgb(255, 255, 255);"
+                                        d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
+                                        fill="#000002"></path>
+                                </svg>
+                            </span>
+                            <img src="https://a0.muscache.com/im/pictures/2a466bb0-5738-47d1-b42b-345da9dadd3a.jpg?im_w=1200"
+                                class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
+                            <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Sautwark</p>
+                            <p class="text-muted mb-0" style="font-size: 0.75em;">10-12 ott • Host privato</p>
+                            <p class="text-muted" style="font-size: 0.75em;">155€ per 2 notti • &starf; 4,94</p>
+                        </div>
+                        <div class="scroll-card">
+                            <span class="heart-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
+                                    style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
+                                    <path style="fill: rgb(255, 255, 255);"
+                                        d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
+                                        fill="#000002"></path>
+                                </svg>
+                            </span>
+                            <img src="https://a0.muscache.com/im/pictures/85008c96-0544-40eb-8d57-4f08660d8e23.jpg?im_w=1200"
+                                class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
+                            <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Stanza a Sautwark</p>
+                            <p class="text-muted mb-0" style="font-size: 0.75em;">24-26 ott • Host privato</p>
+                            <p class="text-muted" style="font-size: 0.75em;">141€ per 2 notti • &starf; 4,95</p>
+                        </div>
+                        <div class="scroll-card">
+                            <span class="heart-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.3 249.3"
+                                    style="enable-background:new 0 0 249.3 249.3;" xml:space="preserve">
+                                    <path style="fill: rgb(255, 255, 255);"
+                                        d="M249.183,88.644c-0.94-17.571-8.379-34.07-20.947-46.458c-12.756-12.574-29.414-19.499-46.904-19.499 c-26.191,0-44.735,20.23-54.697,31.099c-0.567,0.618-1.176,1.282-1.771,1.924c-0.319-0.362-0.636-0.723-0.938-1.067 C114.82,44.27,95.87,22.687,67.972,22.687c-17.49,0-34.147,6.925-46.903,19.499C8.5,54.574,1.061,71.073,0.121,88.644 c-0.934,17.467,3.507,32.624,14.396,49.146c9.759,14.811,35.173,38.228,53.97,53.78c19.32,15.986,44.767,35.042,56.272,35.042 c11.686,0,37.043-19.016,56.256-34.968c18.651-15.485,43.925-38.883,53.775-53.86C242.119,126.64,250.379,110.983,249.183,88.644z M222.258,129.542c-7.157,10.885-27.331,30.995-50.201,50.044c-27.269,22.714-43.414,31.666-47.286,32.022 c-3.866-0.403-20.051-9.445-47.453-32.201c-23.004-19.104-43.208-39.146-50.276-49.871c-9.011-13.672-12.694-26.036-11.943-40.092 c1.527-28.539,25.246-51.758,52.872-51.758c21.107,0,36.443,17.468,44.683,26.851c4.844,5.518,7.513,8.557,11.999,8.557 c4.631,0,7.618-3.259,13.04-9.174c8.994-9.813,24.047-26.234,43.639-26.234c27.627,0,51.345,23.219,52.873,51.758 C234.965,103.659,231.392,115.652,222.258,129.542z"
+                                        fill="#000002"></path>
+                                </svg>
+                            </span>
+                            <img src="https://a0.muscache.com/im/pictures/98485873/a4ae58aa_original.jpg?im_w=1200"
+                                class="img-fluid" alt="apartment" style="height: 130px; border-radius: 20px;" />
+                            <p class="fw-semibold mb-0 mt-1" style="font-size: 0.90rem;">Appartamento • Londra</p>
+                            <p class="text-muted mb-0" style="font-size: 0.75em;">06-08 mar • Host privato</p>
+                            <p class="text-muted" style="font-size: 0.75em;">179€ per 2 notti • &starf; 4,79</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="container-fluid">
+
+                <div class="row mb-5">
+
+                    <!-- FOOTER - ASSISTENZA -->
+                    <div class="col-12 col-md-4">
+                        <ul class="list-unstyled">
+                            <li class="text-dark">Assistenza</li>
+
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Centro
+                                    Assistenza</a></li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">AirCover</a></li>
+                            <li><a href="#"
+                                    class="text-secondary text-decoration-none d-block mb-2">Antidiscriminazione</a>
+                            </li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Supporto alla
+                                    disabilità</a></li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Opzioni di
+                                    cancellazione</a></li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Segnala problema
+                                    nel quartiere</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- FOOTER - OSPITARE -->
+                    <div class="col-12 col-md-4">
+                        <ul class="list-unstyled">
+                            <li class="text-dark">Ospitare</li>
+
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Apri un Airbnb</a>
+                            </li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">AirCover per gli
+                                    host</a></li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Risorse per gli
+                                    host</a></li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Forum della
+                                    community</a></li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Ospitare
+                                    responsabilmente</a></li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Partecipa a una
+                                    lezione gratuita sull'ospitalità</a></li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Trova un
+                                    co-host</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- FOOTER - AIRBNB -->
+                    <div class="col-12 col-md-4">
+                        <ul class="list-unstyled">
+                            <li class="text-dark">Airbnb</li>
+
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">2025 Summer
+                                    Release</a></li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Newsroom</a></li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Nuove
+                                    funzionalità</a></li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Opportunità di
+                                    lavoro</a></li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Investitori</a>
+                            </li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Gift card</a></li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Soggiorni con
+                                    Airbnb.org</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- FOOTER - COPYRIGHT -->
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-4">
+                    <small class="text-secondary text-center text-md-start mb-2 mb-md-0">&copy; 2025 Airbnb, Inc.
+                        <span class="d-inline-block ms-2"><a href="#"
+                                class="text-secondary text-decoration-none">&middot; Privacy</a></span>
+                        <span class="d-inline-block ms-2"><a href="#"
+                                class="text-secondary text-decoration-none">&middot; Termini</a></span>
+                        <span class="d-inline-block ms-2"><a href="#"
+                                class="text-secondary text-decoration-none">&middot; Mappa del sito</a></span>
+                        <span class="d-inline-block ms-2"><a href="#"
+                                class="text-secondary text-decoration-none">&middot; Dettagli dell'azienda</a></span>
+                    </small>
+
+                    <div class="d-flex align-items-center gap-2">
+
+                        <!-- LINGUA -->
+                        <button class="btn btn-light rounded-pill p-2 d-none d-md-block"><span><i
+                                    class="bi bi-globe me-2"></i></span>Italiano (IT)</button>
+
+                        <!-- VALUTA (€) -->
+                        <button class="btn btn-light rounded-pill p-2 d-none d-md-block"><span><i
+                                    class="bi bi-currency-euro me-2"></i></span>EUR</button>
+
+                        <!-- FACEBOOK -->
+                        <button class="btn btn-light rounded-pill p-2 d-none d-md-block"><i
+                                class="bi bi-facebook me-1"></i></button>
+
+                        <!-- TWITTER -->
+                        <button class="btn btn-light rounded-pill p-2 d-none d-md-block"><i
+                                class="bi bi-twitter me-1"></i></button>
+
+                        <!-- INSTAGRAM -->
+                        <button class="btn btn-light rounded-pill p-2 d-none d-md-block"><i
+                                class="bi bi-instagram me-1"></i></button>
+                    </div>
+
+                </div>
+
             </div>
-        </section>
+        </footer>
 
-    </main>
+    </section>
 
 
 
-    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous">
