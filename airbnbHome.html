@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- CSS Personalizzato -->
-    <link rel="stylesheet" href="airbnbStyle.css">
+    <link rel="stylesheet" href="airbnbHome.css">
 
     <!-- Favicon -->
     <link rel="icon" href="img/logo/faviconAirbnb.jpeg">
@@ -86,12 +86,13 @@
 
                         <!-- MENU DROPDOWN - COLLEGAMENTI -->
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">Registrati</a></li>
-                            <li><a class="dropdown-item" href="#">Accedi</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-question-circle"></i> Centro assistenza</a></li>
+                            <li><a class="dropdown-item" href="#">Inizia a ospitare <img src="img/icone/iconaCasa.png" alt="Icona Casa"></a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Affitta il tuo spazio</a></li>
-                            <li><a class="dropdown-item" href="#">Organizza un'esperienza</a></li>
-                            <li><a class="dropdown-item" href="#">Aiuto</a></li>
+                            <li><a class="dropdown-item" href="#">Trova un co-host</a></li>
+                            <li><a class="dropdown-item" href="#">Gift card</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Accedi o registrati</a></li>
                         </ul>
                     </div>
                 </div>
@@ -99,29 +100,95 @@
 
             <!-- SEARCHBAR PER DESKTOP -->
             <div class="search-bar-desktop mt-4 d-none d-md-block" id="searchBarDesktop">
-                <div class="d-flex align-items-center bg-white border rounded-pill shadow p-2">
-                    <div class="search-field p-2 border-end">
-                        <label class="d-block fw-bold text-dark search-label">Dove</label>
-                        <input type="text" class="form-control-plaintext p-0" placeholder="Cerca destinazioni">
-                    </div>
-                    <div class="search-field p-2 border-end">
-                        <label class="d-block fw-bold text-dark search-label">Check-in</label>
-                        <input type="text" class="form-control-plaintext p-0" placeholder="Aggiungi date">
-                    </div>
-                    <div class="search-field p-2 border-end">
-                        <label class="d-block fw-bold text-dark search-label">Check-out</label>
-                        <input type="text" class="form-control-plaintext p-0" placeholder="Aggiungi date">
-                    </div>
-                    <div class="search-field guest-field p-2">
-                        <label class="d-block fw-bold text-dark search-label">Chi</label>
-                        <input type="text" class="form-control-plaintext p-0" placeholder="Aggiungi ospiti">
-                    </div>
-                    <button
-                        class="btn btn-danger rounded-circle p-0 d-flex justify-content-center align-items-center flex-shrink-0 ms-auto me-1 search-btn">
-                        <i class="bi bi-search text-white search-icon"></i>
-                    </button>
+              <div class="d-flex align-items-center bg-white border rounded-pill shadow p-2">
+            
+                <!-- SEZIONE DOVE -->
+                <div class="search-field p-2 border-end dropdown">
+                  <label class="d-block fw-bold text-dark search-label">Dove</label>
+                  <input type="text" class="form-control-plaintext p-0 dropdown-toggle" data-bs-toggle="dropdown" placeholder="Cerca destinazioni" readonly>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-compass-fill"></i> Nelle vicinanze</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-landmark"></i> Roma</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-vihara"></i> Shanghai</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gopuram"></i> Chichén Itzá</a></li>
+                  </ul>
                 </div>
+            
+                <!-- SEZIONE CHECK-IN -->
+                <div class="search-field p-2 border-end dropdown">
+                  <label class="d-block fw-bold text-dark search-label">Check-in</label>
+                  <input type="text" class="form-control-plaintext p-0 dropdown-toggle" data-bs-toggle="dropdown" placeholder="Aggiungi date" readonly>
+                  <div class="dropdown-menu p-3" style="min-width: 300px;">
+                    <!-- Qui puoi mettere un datepicker -->
+                    <p class="mb-0 text-muted">Seleziona la data di check-in</p>
+                  </div>
+                </div>
+            
+                <!-- SEZIONE CHECK-OUT -->
+                <div class="search-field p-2 border-end dropdown">
+                  <label class="d-block fw-bold text-dark search-label">Check-out</label>
+                  <input type="text" class="form-control-plaintext p-0 dropdown-toggle" data-bs-toggle="dropdown" placeholder="Aggiungi date" readonly>
+                  <div class="dropdown-menu p-3" style="min-width: 300px;">
+                    <!-- Anche qui un datepicker -->
+                    <p class="mb-0 text-muted">Seleziona la data di check-out</p>
+                  </div>
+                </div>
+            
+                <!-- SEZIONE CHI -->
+                <div class="search-field guest-field p-2 dropdown">
+                  <label class="d-block fw-bold text-dark search-label">Chi</label>
+                  <input type="text" class="form-control-plaintext p-0 dropdown-toggle" data-bs-toggle="dropdown" placeholder="Aggiungi ospiti" readonly>
+                  <div class="dropdown-menu p-3" style="min-width: 250px;">
+
+                    <!-- Adulti -->
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                      <div>
+                        <div class="fw-bold">Adulti</div>
+                        <div class="text-muted" style="font-size: 0.85rem;">Età 13 o più</div>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <button class="btn btn-outline-secondary btn-sm px-2" onclick="decrementaOspite('adulti')">-</button>
+                        <span id="adultiCount" class="mx-2">2</span>
+                        <button class="btn btn-outline-secondary btn-sm px-2" onclick="incrementaOspite('adulti')">+</button>
+                      </div>
+                    </div>
+                
+                    <!-- Bambini -->
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <div class="fw-bold">Bambini</div>
+                        <div class="text-muted" style="font-size: 0.85rem;">Età 2-12</div>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <button class="btn btn-outline-secondary btn-sm px-2" onclick="decrementaOspite('bambini')">-</button>
+                        <span id="bambiniCount" class="mx-2">0</span>
+                        <button class="btn btn-outline-secondary btn-sm px-2" onclick="incrementaOspite('bambini')">+</button>
+                      </div>
+                    </div>
+                  
+                    <!-- Animali domestici -->
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <div class="fw-bold">Animali domestici</div>
+                        <div class="text-muted" style="font-size: 0.85rem;"><a href="#" class="text-secondary">Viaggi con un animale di servizio?</a></div>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <button class="btn btn-outline-secondary btn-sm px-2" onclick="decrementaOspite('animaliDomestici')">-</button>
+                        <span id="animaliDomesticiCount" class="mx-2">0</span>
+                        <button class="btn btn-outline-secondary btn-sm px-2" onclick="incrementaOspite('animaliDomestici')">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>              
+
+                <!-- BOTTONE CERCA -->
+                <button
+                  class="btn btn-danger rounded-circle p-0 d-flex justify-content-center align-items-center flex-shrink-0 ms-auto me-1 search-btn">
+                  <i class="bi bi-search text-white search-icon"></i>
+                </button>
+              </div>
             </div>
+
 
             <!-- SEARCHBAR PER MOBILE -->
             <div class="search-bar-mobile d-md-none mt-2 w-100" id="searchBarMobile">
@@ -138,7 +205,7 @@
         </div>
     </header>
 
-    <main></main>
+    
 
     <footer>
         <div class="container-fluid">
@@ -228,6 +295,16 @@
 
     <!-- Script Personalizzato -->
     <script src="airbnb.js"></script>
+
+    <!-- Script per sovrascrivere il comportamento di Bootstrap che chiude i dropdown item al click -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.dropdown-menu button').forEach(btn => {
+            btn.addEventListener('click', e => e.stopPropagation());
+            });
+        });
+    </script>
+
 </body>
 
 </html>

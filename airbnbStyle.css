@@ -1,53 +1,78 @@
-header{
+header {
   background-color: rgb(247, 247, 247);
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
-header img{
+header img {
   height: 50px;
 }
 
-#logo img{
-    height: 50px;
+#logo img {
+  height: 50px;
 }
 
-nav{
+nav {
   margin-left: 5em;
 }
 
 .nav-icon {
-    height: 50px;
+  height: 50px;
 }
 
 .custom-badge {
-    font-size: 0.6em;
+  font-size: 0.6em;
 }
 
 .search-label {
-    font-size: 0.8em;
+  font-size: 0.8em;
 }
 
 .search-btn {
-    width: 48px;
-    height: 48px;
+  width: 48px;
+  height: 48px;
 }
 
 .search-icon {
-    font-size: 1em;
+  font-size: 1em;
 }
 
 .mobile-search-icon {
-    font-size: 1em;
+  font-size: 1em;
 }
 
 .mobile-filter-icon {
-    font-size: 0.8em;
+  font-size: 0.8em;
 }
 
-footer{
+footer {
   background-color: rgb(247, 247, 247);
   padding: 5em;
-  padding-left: 15% !important;
-  padding-right: 15% !important;
+  padding-left: 5% !important;
+  padding-right: 5% !important;
+}
+
+#mainFooter {
+  position: relative;
+  top: 240px;
+}
+
+.custom-narrow {
+  max-width: 900px;
+}
+
+.booking-card {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.guest-avatar {
+  width: 50px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 767px) {
+  #mainFooter {
+    top: 109px;
+  }
 }

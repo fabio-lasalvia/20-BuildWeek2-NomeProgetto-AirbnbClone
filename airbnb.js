@@ -11,3 +11,20 @@ function caricaPagina(pagina) {
   window.location.replace(pagina);
 }
 
+const ospiti = {
+  adulti: 2,
+  bambini: 0,
+  animaliDomestici: 0,
+};
+
+function incrementaOspite(type) {
+  ospiti[type]++;
+  document.getElementById(`${type}Count`).textContent = ospiti[type];
+}
+
+function decrementaOspite(type) {
+  if (ospiti[type] > 0) {
+    ospiti[type]--;
+    document.getElementById(`${type}Count`).textContent = ospiti[type];
+  }
+}
