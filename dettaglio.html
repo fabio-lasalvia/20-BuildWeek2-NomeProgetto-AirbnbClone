@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirbnbClone - Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS Personalizzato -->
+    <link rel="stylesheet" href="airbnbStyle.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/logo/faviconAirbnb.jpeg">
+
+    <style>
+        .custom-narrow {
+            max-width: 900px;
+        }
+
+        .booking-card {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .guest-avatar {
+            width: 50px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <header class="header fixed-top shadow-sm py-md-4">
+        <div class="container-fluid d-flex flex-column align-items-center">
+
+            <div class="d-flex justify-content-between align-items-center w-100 flex-grow-1">
+
+                <!-- LOGO - SINISTRA -->
+                <div id="logo">
+                    <img src="img/logo/logo-pink.png" alt="Airbnb Logo" class="img-fluid logo-img">
+                </div>
+
+                <!-- SEZIONE TRE ICONE - CENTRALE -->
+                <nav class="navbar navbar-expand p-0 header-nav d-none d-md-flex" id="headerNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-4">
+
+                        <!-- ALLOGGI -->
+                        <li class="nav-item">
+                            <a class="nav-link text-dark fw-semibold d-flex flex-column align-items-center" href="#">
+                                <img src="img/icone/iconaCasa.png" alt="" class="nav-icon">
+                                <span>Alloggi</span>
+                            </a>
+                        </li>
+
+                        <!-- ESPERIENZE -->
+                        <li class="nav-item position-relative">
+                            <a class="nav-link text-dark fw-semibold d-flex flex-column align-items-center" href="#">
+                                <img src="img/icone/iconaMongolfiera.png" alt="" class="nav-icon">
+                                <span>Esperienze</span>
+                                <span
+                                    class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle custom-badge">NOVITÀ</span>
+                            </a>
+                        </li>
+
+                        <!-- SERVIZI -->
+                        <li class="nav-item position-relative">
+                            <a class="nav-link text-dark fw-semibold d-flex flex-column align-items-center" href="#">
+                                <img src="img/icone/iconaCampanella.png" alt="" class="nav-icon">
+                                <span>Servizi</span>
+                                <span
+                                    class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle custom-badge">NOVITÀ</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- COLLEGAMENTI - DESTRA -->
+                <div class="d-flex align-items-center gap-2">
+
+                    <!-- INIZIA A OSPITARE -->
+                    <button class="btn btn-light rounded-pill fw-semibold py-2 px-3 d-none d-md-block">Inizia a
+                        ospitare</button>
+
+                    <div class="dropdown d-flex">
+                        <!-- BTN GLOBE -->
+                        <button class="btn btn-light border rounded-pill d-flex align-items-center gap-2 py-2 px-3"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a href="#" class="text-black"><i class="bi bi-globe fs-5"></i></a>
+                        </button>
+
+                        <!-- BTN LISTA -->
+                        <button class="btn btn-light border rounded-pill d-flex align-items-center gap-2 py-2 px-3"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a href="#" class="text-black"><i class="bi bi-list fs-5"></i></a>
+                        </button>
+
+                        <!-- MENU DROPDOWN - COLLEGAMENTI -->
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Registrati</a></li>
+                            <li><a class="dropdown-item" href="#">Accedi</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Affitta il tuo spazio</a></li>
+                            <li><a class="dropdown-item" href="#">Organizza un'esperienza</a></li>
+                            <li><a class="dropdown-item" href="#">Aiuto</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow-1" style="padding-top: 150px; padding-bottom: 100px;">
+        <div class="container custom-narrow">
+            <h2 class="mt-4">Blarmor home</h2>
+            <p class="text-muted">4.6 ratings · Inverness</p>
+
+            <!-- Gallery -->
+            <div class="row g-2 mb-4">
+                <div class="col-md-6"><img src="img/card/1.webp" class="img-fluid rounded"></div>
+                <div class="col-md-6">
+                    <div class="row g-2">
+                        <div class="col-6"><img src="img/card/2.webp" class="img-fluid rounded"></div>
+                        <div class="col-6"><img src="img/card/3.webp" class="img-fluid rounded"></div>
+                        <div class="col-6"><img src="img/card/4.webp" class="img-fluid rounded"></div>
+                        <div class="col-6"><img src="img/card/5.webp" class="img-fluid rounded"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="row">
+                <div class="col-md-8">
+                    <h5>House - Host: Erica</h5>
+                    <p>3 rooms · Perfect place to visit the Loch Ness and go looking for Nessie.</p>
+
+                    <ul class="list-unstyled">
+                        <li><strong>🏠 House:</strong> You will have the whole premise for you.</li>
+                        <li><strong>🧼 Advanced Cleaning Methods:</strong> 5-step cleaning process.</li>
+                        <li><strong>📍 Inverness:</strong> 5 Kinonee Rd</li>
+                        <li><strong>❗ Cancellation Terms:</strong> Add travel dates to see terms.</li>
+                        <li><strong>🚫 Rules:</strong> No parties, pets or smoking.</li>
+                    </ul>
+
+                    <!-- Review Form -->
+                    <h6 class="mt-5">Leave a Review</h6>
+                    <form>
+                        <div class="row mb-2">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Enter Name">
+                            </div>
+                            <div class="col">
+                                <select class="form-select">
+                                    <option selected>Rating</option>
+                                    <option>★☆☆☆☆</option>
+                                    <option>★★☆☆☆</option>
+                                    <option>★★★☆☆</option>
+                                    <option>★★★★☆</option>
+                                    <option>★★★★★</option>
+                                </select>
+                            </div>
+                        </div>
+                        <textarea class="form-control mb-2" rows="3" placeholder="Type in your review"></textarea>
+                        <button class="btn btn-primary" type="submit">Submit Review</button>
+                    </form>
+
+                    <!-- Reviews -->
+                    <div class="d-flex mt-5 align-items-start">
+                        <img src="img/user/propic.png" class="guest-avatar me-3">
+                        <div>
+                            <strong>Noemi</strong> <small class="text-muted">Jan 2021</small>
+                            <p class="mb-0">I was cold and couldn’t figure out how to turn on the heating.
+                                Otherwise,
+                                amazing
+                                house.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mt-3 align-items-start">
+                        <img src="img/user/propic.png" class="guest-avatar me-3">
+                        <div>
+                            <strong>Enrico</strong> <small class="text-muted">Jan 2021</small>
+                            <p class="mb-0">Amazing place. I’ve been here with my daughter to take pictures and we
+                                were not
+                                disappointed!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Box -->
+                <div class="col-md-4">
+                    <div class="booking-card p-4 bg-white mt-3 mt-md-0">
+                        <h6>Add dates to see the prices <span class="text-danger">*</span></h6>
+                        <small class="text-muted">⭐ 4.0 · 6 reviews</small>
+                        <form class="mt-3">
+                            <input type="text" class="form-control mb-2" placeholder="gg/mm/aaaa">
+                            <input type="text" class="form-control mb-2" placeholder="gg/mm/aaaa">
+                            <input type="text" class="form-control mb-3" placeholder="Guests">
+                            <button class="btn btn-danger w-100">Cancel Booking</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container-fluid">
+
+            <div class="row mb-5">
+
+                <!-- FOOTER - ASSISTENZA -->
+                <div class="col-12 col-md-4">
+                    <ul class="list-unstyled">
+                        <li class="text-dark">Assistenza</li>
+
+                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Centro Assistenza</a>
+                        </li>
+                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">AirCover</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Antidiscriminazione</a>
+                        </li>
+                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Supporto alla
+                                disabilità</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Opzioni di
+                                cancellazione</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Segnala problema nel
+                                quartiere</a></li>
+                    </ul>
+                </div>
+
+                <!-- FOOTER - OSPITARE -->
+                <div class="col-12 col-md-4">
+                    <ul class="list-unstyled">
+                        <li class="text-dark">Ospitare</li>
+
+                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Apri un Airbnb</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">AirCover per gli
+                                host</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Risorse per gli
+                                host</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Forum della
+                                community</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Ospitare
+                                responsabilmente</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Partecipa a una lezione
+                                gratuita sull'ospitalità</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Trova un co-host</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- FOOTER - AIRBNB -->
+                <div class="col-12 col-md-4">
+                    <ul class="list-unstyled">
+                        <li class="text-dark">Airbnb</li>
+
+                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">2025 Summer Release</a>
+                        </li>
+                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Newsroom</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Nuove funzionalità</a>
+                        </li>
+                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Opportunità di
+                                lavoro</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Investitori</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Gift card</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Soggiorni con
+                                Airbnb.org</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- FOOTER - COPYRIGHT -->
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-4">
+                <small class="text-secondary text-center text-md-start mb-2 mb-md-0">&copy; 2025 Airbnb, Inc.
+                    <span class="d-inline-block ms-2"><a href="#" class="text-secondary text-decoration-none">&middot;
+                            Privacy</a></span>
+                    <span class="d-inline-block ms-2"><a href="#" class="text-secondary text-decoration-none">&middot;
+                            Termini</a></span>
+                    <span class="d-inline-block ms-2"><a href="#" class="text-secondary text-decoration-none">&middot;
+                            Mappa del sito</a></span>
+                    <span class="d-inline-block ms-2"><a href="#" class="text-secondary text-decoration-none">&middot;
+                            Dettagli dell'azienda</a></span>
+                </small>
+
+                <div class="d-flex align-items-center gap-2">
+
+                    <!-- LINGUA -->
+                    <button class="btn btn-light rounded-pill p-2 d-none d-md-block"><span><i
+                                class="bi bi-globe me-2"></i></span>Italiano (IT)</button>
+
+                    <!-- VALUTA (€) -->
+                    <button class="btn btn-light rounded-pill p-2 d-none d-md-block"><span><i
+                                class="bi bi-currency-euro me-2"></i></span>EUR</button>
+
+                    <!-- FACEBOOK -->
+                    <button class="btn btn-light rounded-pill p-2 d-none d-md-block"><i
+                            class="bi bi-facebook me-1"></i></button>
+
+                    <!-- TWITTER -->
+                    <button class="btn btn-light rounded-pill p-2 d-none d-md-block"><i
+                            class="bi bi-twitter me-1"></i></button>
+
+                    <!-- INSTAGRAM -->
+                    <button class="btn btn-light rounded-pill p-2 d-none d-md-block"><i
+                            class="bi bi-instagram me-1"></i></button>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script Personalizzato -->
+    <script src="airbnb.js"></script>
+</body>
+
+</html>
