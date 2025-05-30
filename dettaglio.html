@@ -20,21 +20,6 @@
     <!-- Favicon -->
     <link rel="icon" href="img/logo/faviconAirbnb.jpeg">
 
-    <style>
-        .custom-narrow {
-            max-width: 900px;
-        }
-
-        .booking-card {
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-
-        .guest-avatar {
-            width: 50px;
-            border-radius: 50%;
-        }
-    </style>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -104,227 +89,357 @@
 
                         <!-- MENU DROPDOWN - COLLEGAMENTI -->
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">Registrati</a></li>
-                            <li><a class="dropdown-item" href="#">Accedi</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-question-circle"></i> Centro
+                                    assistenza</a></li>
+                            <li><a class="dropdown-item" href="#">Inizia a ospitare <img src="img/icone/iconaCasa.png"
+                                        alt="Icona Casa"></a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Affitta il tuo spazio</a></li>
-                            <li><a class="dropdown-item" href="#">Organizza un'esperienza</a></li>
-                            <li><a class="dropdown-item" href="#">Aiuto</a></li>
+                            <li><a class="dropdown-item" href="#">Trova un co-host</a></li>
+                            <li><a class="dropdown-item" href="#">Gift card</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Accedi o registrati</a></li>
                         </ul>
                     </div>
+                </div>
+            </div>
+
+            <!-- SEARCHBAR PER DESKTOP -->
+            <div class="search-bar-desktop mt-4 d-none d-md-block" id="searchBarDesktop">
+                <div class="d-flex align-items-center bg-white border rounded-pill shadow p-2">
+
+                    <!-- SEZIONE DOVE -->
+                    <div class="search-field p-2 border-end dropdown">
+                        <label class="d-block fw-bold text-dark search-label">Dove</label>
+                        <input type="text" class="form-control-plaintext p-0 dropdown-toggle" data-bs-toggle="dropdown"
+                            placeholder="Cerca destinazioni" readonly>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-compass-fill"></i> Nelle vicinanze</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-landmark"></i> Roma</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-vihara"></i> Shanghai</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gopuram"></i> Chichén Itzá</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- SEZIONE CHECK-IN -->
+                    <div class="search-field p-2 border-end dropdown">
+                        <label class="d-block fw-bold text-dark search-label">Check-in</label>
+                        <input type="text" class="form-control-plaintext p-0 dropdown-toggle" data-bs-toggle="dropdown"
+                            placeholder="Aggiungi date" readonly>
+                        <div class="dropdown-menu p-3" style="min-width: 300px;">
+                            <!-- Qui puoi mettere un datepicker -->
+                            <p class="mb-0 text-muted">Seleziona la data di check-in</p>
+                        </div>
+                    </div>
+
+                    <!-- SEZIONE CHECK-OUT -->
+                    <div class="search-field p-2 border-end dropdown">
+                        <label class="d-block fw-bold text-dark search-label">Check-out</label>
+                        <input type="text" class="form-control-plaintext p-0 dropdown-toggle" data-bs-toggle="dropdown"
+                            placeholder="Aggiungi date" readonly>
+                        <div class="dropdown-menu p-3" style="min-width: 300px;">
+                            <!-- Anche qui un datepicker -->
+                            <p class="mb-0 text-muted">Seleziona la data di check-out</p>
+                        </div>
+                    </div>
+
+                    <!-- SEZIONE CHI -->
+                    <div class="search-field guest-field p-2 dropdown">
+                        <label class="d-block fw-bold text-dark search-label">Chi</label>
+                        <input type="text" class="form-control-plaintext p-0 dropdown-toggle" data-bs-toggle="dropdown"
+                            placeholder="Aggiungi ospiti" readonly>
+                        <div class="dropdown-menu p-3" style="min-width: 250px;">
+
+                            <!-- Adulti -->
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <div>
+                                    <div class="fw-bold">Adulti</div>
+                                    <div class="text-muted" style="font-size: 0.85rem;">Età 13 o più</div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <button class="btn btn-outline-secondary btn-sm px-2"
+                                        onclick="decrementaOspite('adulti')">-</button>
+                                    <span id="adultiCount" class="mx-2">2</span>
+                                    <button class="btn btn-outline-secondary btn-sm px-2"
+                                        onclick="incrementaOspite('adulti')">+</button>
+                                </div>
+                            </div>
+
+                            <!-- Bambini -->
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="fw-bold">Bambini</div>
+                                    <div class="text-muted" style="font-size: 0.85rem;">Età 2-12</div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <button class="btn btn-outline-secondary btn-sm px-2"
+                                        onclick="decrementaOspite('bambini')">-</button>
+                                    <span id="bambiniCount" class="mx-2">0</span>
+                                    <button class="btn btn-outline-secondary btn-sm px-2"
+                                        onclick="incrementaOspite('bambini')">+</button>
+                                </div>
+                            </div>
+
+                            <!-- Animali domestici -->
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="fw-bold">Animali domestici</div>
+                                    <div class="text-muted" style="font-size: 0.85rem;"><a href="#"
+                                            class="text-secondary">Viaggi con un animale di servizio?</a></div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <button class="btn btn-outline-secondary btn-sm px-2"
+                                        onclick="decrementaOspite('animaliDomestici')">-</button>
+                                    <span id="animaliDomesticiCount" class="mx-2">0</span>
+                                    <button class="btn btn-outline-secondary btn-sm px-2"
+                                        onclick="incrementaOspite('animaliDomestici')">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BOTTONE CERCA -->
+                    <button
+                        class="btn btn-danger rounded-circle p-0 d-flex justify-content-center align-items-center flex-shrink-0 ms-auto me-1 search-btn">
+                        <i class="bi bi-search text-white search-icon"></i>
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- SEARCHBAR PER MOBILE -->
+            <div class="search-bar-mobile d-md-none mt-2 w-100" id="searchBarMobile">
+                <div class="d-flex align-items-center bg-white border rounded-pill shadow-sm p-2 w-100">
+                    <button class="btn p-0 me-2" type="button">
+                        <i class="bi bi-search text-dark mobile-search-icon"></i>
+                    </button>
+                    <input type="text" class="form-control-plaintext p-0 fw-semibold text-dark flex-grow-1"
+                        placeholder="Dove vuoi andare?">
+                    <button class="btn btn-light rounded-circle border p-1 ms-2" type="button">
+                        <i class="bi bi-sliders text-dark mobile-filter-icon"></i>
+                    </button>
                 </div>
             </div>
         </div>
     </header>
 
-    <main class="flex-grow-1" style="padding-top: 150px; padding-bottom: 100px;">
-        <div class="container custom-narrow">
-            <h2 class="mt-4">Blarmor home</h2>
-            <p class="text-muted">4.6 ratings · Inverness</p>
+    <section id="mainFooter">
+        <main class="flex-grow-1" style="padding-bottom: 100px;">
+            <div class="container custom-narrow">
+                <h2 class="mt-4">Blarmor home</h2>
+                <p class="text-muted">4.6 ratings · Inverness</p>
 
-            <!-- Gallery -->
-            <div class="row g-2 mb-4">
-                <div class="col-md-6"><img src="img/card/1.webp" class="img-fluid rounded"></div>
-                <div class="col-md-6">
-                    <div class="row g-2">
-                        <div class="col-6"><img src="img/card/2.webp" class="img-fluid rounded"></div>
-                        <div class="col-6"><img src="img/card/3.webp" class="img-fluid rounded"></div>
-                        <div class="col-6"><img src="img/card/4.webp" class="img-fluid rounded"></div>
-                        <div class="col-6"><img src="img/card/5.webp" class="img-fluid rounded"></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Main content -->
-            <div class="row">
-                <div class="col-md-8">
-                    <h5>House - Host: Erica</h5>
-                    <p>3 rooms · Perfect place to visit the Loch Ness and go looking for Nessie.</p>
-
-                    <ul class="list-unstyled">
-                        <li><strong>🏠 House:</strong> You will have the whole premise for you.</li>
-                        <li><strong>🧼 Advanced Cleaning Methods:</strong> 5-step cleaning process.</li>
-                        <li><strong>📍 Inverness:</strong> 5 Kinonee Rd</li>
-                        <li><strong>❗ Cancellation Terms:</strong> Add travel dates to see terms.</li>
-                        <li><strong>🚫 Rules:</strong> No parties, pets or smoking.</li>
-                    </ul>
-
-                    <!-- Review Form -->
-                    <h6 class="mt-5">Leave a Review</h6>
-                    <form>
-                        <div class="row mb-2">
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="Enter Name">
-                            </div>
-                            <div class="col">
-                                <select class="form-select">
-                                    <option selected>Rating</option>
-                                    <option>★☆☆☆☆</option>
-                                    <option>★★☆☆☆</option>
-                                    <option>★★★☆☆</option>
-                                    <option>★★★★☆</option>
-                                    <option>★★★★★</option>
-                                </select>
-                            </div>
-                        </div>
-                        <textarea class="form-control mb-2" rows="3" placeholder="Type in your review"></textarea>
-                        <button class="btn btn-primary" type="submit">Submit Review</button>
-                    </form>
-
-                    <!-- Reviews -->
-                    <div class="d-flex mt-5 align-items-start">
-                        <img src="img/user/propic.png" class="guest-avatar me-3">
-                        <div>
-                            <strong>Noemi</strong> <small class="text-muted">Jan 2021</small>
-                            <p class="mb-0">I was cold and couldn’t figure out how to turn on the heating.
-                                Otherwise,
-                                amazing
-                                house.</p>
-                        </div>
-                    </div>
-
-                    <div class="d-flex mt-3 align-items-start">
-                        <img src="img/user/propic.png" class="guest-avatar me-3">
-                        <div>
-                            <strong>Enrico</strong> <small class="text-muted">Jan 2021</small>
-                            <p class="mb-0">Amazing place. I’ve been here with my daughter to take pictures and we
-                                were not
-                                disappointed!</p>
+                <!-- Gallery -->
+                <div class="row g-2 mb-4">
+                    <div class="col-md-6"><img src="img/card/1.webp" class="img-fluid rounded"></div>
+                    <div class="col-md-6">
+                        <div class="row g-2">
+                            <div class="col-6"><img src="img/card/2.webp" class="img-fluid rounded"></div>
+                            <div class="col-6"><img src="img/card/3.webp" class="img-fluid rounded"></div>
+                            <div class="col-6"><img src="img/card/4.webp" class="img-fluid rounded"></div>
+                            <div class="col-6"><img src="img/card/5.webp" class="img-fluid rounded"></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Booking Box -->
-                <div class="col-md-4">
-                    <div class="booking-card p-4 bg-white mt-3 mt-md-0">
-                        <h6>Add dates to see the prices <span class="text-danger">*</span></h6>
-                        <small class="text-muted">⭐ 4.0 · 6 reviews</small>
-                        <form class="mt-3">
-                            <input type="text" class="form-control mb-2" placeholder="gg/mm/aaaa">
-                            <input type="text" class="form-control mb-2" placeholder="gg/mm/aaaa">
-                            <input type="text" class="form-control mb-3" placeholder="Guests">
-                            <button class="btn btn-danger w-100">Cancel Booking</button>
+                <!-- Main content -->
+                <div class="row">
+                    <div class="col-md-8">
+                        <h5>House - Host: Erica</h5>
+                        <p>3 rooms · Perfect place to visit the Loch Ness and go looking for Nessie.</p>
+
+                        <ul class="list-unstyled">
+                            <li><strong>🏠 House:</strong> You will have the whole premise for you.</li>
+                            <li><strong>🧼 Advanced Cleaning Methods:</strong> 5-step cleaning process.</li>
+                            <li><strong>📍 Inverness:</strong> 5 Kinonee Rd</li>
+                            <li><strong>❗ Cancellation Terms:</strong> Add travel dates to see terms.</li>
+                            <li><strong>🚫 Rules:</strong> No parties, pets or smoking.</li>
+                        </ul>
+
+                        <!-- Review Form -->
+                        <h6 class="mt-5">Leave a Review</h6>
+                        <form>
+                            <div class="row mb-2">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Enter Name">
+                                </div>
+                                <div class="col">
+                                    <select class="form-select">
+                                        <option selected>Rating</option>
+                                        <option>★☆☆☆☆</option>
+                                        <option>★★☆☆☆</option>
+                                        <option>★★★☆☆</option>
+                                        <option>★★★★☆</option>
+                                        <option>★★★★★</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <textarea class="form-control mb-2" rows="3" placeholder="Type in your review"></textarea>
+                            <button class="btn btn-primary" type="submit">Submit Review</button>
                         </form>
+
+                        <!-- Reviews -->
+                        <div class="d-flex mt-5 align-items-start">
+                            <img src="img/user/propic.png" class="guest-avatar me-3">
+                            <div>
+                                <strong>Noemi</strong> <small class="text-muted">Jan 2021</small>
+                                <p class="mb-0">I was cold and couldn’t figure out how to turn on the heating.
+                                    Otherwise,
+                                    amazing
+                                    house.</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mt-3 align-items-start">
+                            <img src="img/user/propic.png" class="guest-avatar me-3">
+                            <div>
+                                <strong>Enrico</strong> <small class="text-muted">Jan 2021</small>
+                                <p class="mb-0">Amazing place. I’ve been here with my daughter to take pictures and we
+                                    were not
+                                    disappointed!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Booking Box -->
+                    <div class="col-md-4">
+                        <div class="booking-card p-4 bg-white mt-3 mt-md-0">
+                            <h6>Add dates to see the prices <span class="text-danger">*</span></h6>
+                            <small class="text-muted">⭐ 4.0 · 6 reviews</small>
+                            <form class="mt-3">
+                                <input type="text" class="form-control mb-2" placeholder="gg/mm/aaaa">
+                                <input type="text" class="form-control mb-2" placeholder="gg/mm/aaaa">
+                                <input type="text" class="form-control mb-3" placeholder="Guests">
+                                <button class="btn btn-danger w-100">Cancel Booking</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
 
-    <footer>
-        <div class="container-fluid">
+        <!-- FOOTER -->
+        <footer>
+            <div class="container-fluid">
 
-            <div class="row mb-5">
+                <div class="row mb-5">
 
-                <!-- FOOTER - ASSISTENZA -->
-                <div class="col-12 col-md-4">
-                    <ul class="list-unstyled">
-                        <li class="text-dark">Assistenza</li>
+                    <!-- FOOTER - ASSISTENZA -->
+                    <div class="col-12 col-md-4">
+                        <ul class="list-unstyled">
+                            <li class="text-dark">Assistenza</li>
 
-                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Centro Assistenza</a>
-                        </li>
-                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">AirCover</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Antidiscriminazione</a>
-                        </li>
-                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Supporto alla
-                                disabilità</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Opzioni di
-                                cancellazione</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Segnala problema nel
-                                quartiere</a></li>
-                    </ul>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Centro
+                                    Assistenza</a></li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">AirCover</a></li>
+                            <li><a href="#"
+                                    class="text-secondary text-decoration-none d-block mb-2">Antidiscriminazione</a>
+                            </li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Supporto alla
+                                    disabilità</a></li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Opzioni di
+                                    cancellazione</a></li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Segnala problema
+                                    nel quartiere</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- FOOTER - OSPITARE -->
+                    <div class="col-12 col-md-4">
+                        <ul class="list-unstyled">
+                            <li class="text-dark">Ospitare</li>
+
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Apri un Airbnb</a>
+                            </li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">AirCover per gli
+                                    host</a></li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Risorse per gli
+                                    host</a></li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Forum della
+                                    community</a></li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Ospitare
+                                    responsabilmente</a></li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Partecipa a una
+                                    lezione gratuita sull'ospitalità</a></li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Trova un
+                                    co-host</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- FOOTER - AIRBNB -->
+                    <div class="col-12 col-md-4">
+                        <ul class="list-unstyled">
+                            <li class="text-dark">Airbnb</li>
+
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">2025 Summer
+                                    Release</a></li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Newsroom</a></li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Nuove
+                                    funzionalità</a></li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Opportunità di
+                                    lavoro</a></li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Investitori</a>
+                            </li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Gift card</a></li>
+                            <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Soggiorni con
+                                    Airbnb.org</a></li>
+                        </ul>
+                    </div>
+
                 </div>
 
-                <!-- FOOTER - OSPITARE -->
-                <div class="col-12 col-md-4">
-                    <ul class="list-unstyled">
-                        <li class="text-dark">Ospitare</li>
+                <!-- FOOTER - COPYRIGHT -->
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-4">
+                    <small class="text-secondary text-center text-md-start mb-2 mb-md-0">&copy; 2025 Airbnb, Inc.
+                        <span class="d-inline-block ms-2"><a href="#"
+                                class="text-secondary text-decoration-none">&middot; Privacy</a></span>
+                        <span class="d-inline-block ms-2"><a href="#"
+                                class="text-secondary text-decoration-none">&middot; Termini</a></span>
+                        <span class="d-inline-block ms-2"><a href="#"
+                                class="text-secondary text-decoration-none">&middot; Mappa del sito</a></span>
+                        <span class="d-inline-block ms-2"><a href="#"
+                                class="text-secondary text-decoration-none">&middot; Dettagli dell'azienda</a></span>
+                    </small>
 
-                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Apri un Airbnb</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">AirCover per gli
-                                host</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Risorse per gli
-                                host</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Forum della
-                                community</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Ospitare
-                                responsabilmente</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Partecipa a una lezione
-                                gratuita sull'ospitalità</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Trova un co-host</a>
-                        </li>
-                    </ul>
-                </div>
+                    <div class="d-flex align-items-center gap-2">
 
-                <!-- FOOTER - AIRBNB -->
-                <div class="col-12 col-md-4">
-                    <ul class="list-unstyled">
-                        <li class="text-dark">Airbnb</li>
+                        <!-- LINGUA -->
+                        <button class="btn btn-light rounded-pill p-2 d-none d-md-block"><span><i
+                                    class="bi bi-globe me-2"></i></span>Italiano (IT)</button>
 
-                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">2025 Summer Release</a>
-                        </li>
-                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Newsroom</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Nuove funzionalità</a>
-                        </li>
-                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Opportunità di
-                                lavoro</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Investitori</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Gift card</a></li>
-                        <li><a href="#" class="text-secondary text-decoration-none d-block mb-2">Soggiorni con
-                                Airbnb.org</a></li>
-                    </ul>
+                        <!-- VALUTA (€) -->
+                        <button class="btn btn-light rounded-pill p-2 d-none d-md-block"><span><i
+                                    class="bi bi-currency-euro me-2"></i></span>EUR</button>
+
+                        <!-- FACEBOOK -->
+                        <button class="btn btn-light rounded-pill p-2 d-none d-md-block"><i
+                                class="bi bi-facebook me-1"></i></button>
+
+                        <!-- TWITTER -->
+                        <button class="btn btn-light rounded-pill p-2 d-none d-md-block"><i
+                                class="bi bi-twitter me-1"></i></button>
+
+                        <!-- INSTAGRAM -->
+                        <button class="btn btn-light rounded-pill p-2 d-none d-md-block"><i
+                                class="bi bi-instagram me-1"></i></button>
+                    </div>
+
                 </div>
 
             </div>
+        </footer>
 
-            <!-- FOOTER - COPYRIGHT -->
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-4">
-                <small class="text-secondary text-center text-md-start mb-2 mb-md-0">&copy; 2025 Airbnb, Inc.
-                    <span class="d-inline-block ms-2"><a href="#" class="text-secondary text-decoration-none">&middot;
-                            Privacy</a></span>
-                    <span class="d-inline-block ms-2"><a href="#" class="text-secondary text-decoration-none">&middot;
-                            Termini</a></span>
-                    <span class="d-inline-block ms-2"><a href="#" class="text-secondary text-decoration-none">&middot;
-                            Mappa del sito</a></span>
-                    <span class="d-inline-block ms-2"><a href="#" class="text-secondary text-decoration-none">&middot;
-                            Dettagli dell'azienda</a></span>
-                </small>
 
-                <div class="d-flex align-items-center gap-2">
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 
-                    <!-- LINGUA -->
-                    <button class="btn btn-light rounded-pill p-2 d-none d-md-block"><span><i
-                                class="bi bi-globe me-2"></i></span>Italiano (IT)</button>
-
-                    <!-- VALUTA (€) -->
-                    <button class="btn btn-light rounded-pill p-2 d-none d-md-block"><span><i
-                                class="bi bi-currency-euro me-2"></i></span>EUR</button>
-
-                    <!-- FACEBOOK -->
-                    <button class="btn btn-light rounded-pill p-2 d-none d-md-block"><i
-                            class="bi bi-facebook me-1"></i></button>
-
-                    <!-- TWITTER -->
-                    <button class="btn btn-light rounded-pill p-2 d-none d-md-block"><i
-                            class="bi bi-twitter me-1"></i></button>
-
-                    <!-- INSTAGRAM -->
-                    <button class="btn btn-light rounded-pill p-2 d-none d-md-block"><i
-                            class="bi bi-instagram me-1"></i></button>
-                </div>
-
-            </div>
-
-        </div>
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Script Personalizzato -->
-    <script src="airbnb.js"></script>
+        <!-- Script Personalizzato -->
+        <script src="airbnb.js"></script>
 </body>
 
 </html>
