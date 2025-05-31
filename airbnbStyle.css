@@ -76,3 +76,123 @@ footer {
     top: 109px;
   }
 }
+
+
+/**
+Inizio: stile card pagina risultati
+*/
+
+.recap {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.card-carousel.card {
+    border: none !important;
+    margin: 10px 0 20px 0;
+}
+
+.card-carousel .carousel-inner {
+    border-radius: 15px;
+}
+
+.card-carousel .carousel-item {
+  height: 20em;
+}
+
+.card-carousel .carousel-item img {
+    height: -webkit-fill-available;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 0.5em 0.3em !important;
+}
+
+.card-carousel .card-body .no-wrap-text,
+.card-carousel .card-body > p {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.card-carousel .card-title {
+    font-size: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-carousel .card-text {
+    margin: 0;
+    line-height: 1.8em;
+    color: #6A6A6A;
+    font-size: 0.85em;
+}
+
+.card-carousel .card-multi-text {
+    margin: 5px 0;
+    color: #6A6A6A;    
+    display: flex;
+    align-items: center;
+}
+
+.card-carousel .card-multi-text .strong {
+    color: black;
+    font-weight: bold;
+}
+
+.card-carousel .card-multi-text button {
+    color: #6A6A6A; 
+    padding: 0 0.3em;
+}
+
+.card-carousel .carousel-indicators button {
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+}
+
+.card-carousel .carousel-control-prev,
+.card-carousel .carousel-control-next {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.card-carousel:hover .carousel-control-prev,
+.card-carousel:hover .carousel-control-next {
+    visibility: visible;
+    opacity: 1;
+}
+
+.card-carousel .carousel-control-prev::before,
+.card-carousel .carousel-control-next::before {
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+    transition: transform 0.1s ease-in;
+}
+
+.card-carousel .carousel-control-prev:hover::before,
+.card-carousel .carousel-control-next:hover::before {
+    transform: scale(1.1);
+}
+
+.card-carousel .carousel-control-prev-icon,
+.card-carousel .carousel-control-next-icon {
+    width: 10px;
+    height: 10px;
+    filter: invert(100%);
+}
+
+/**
+Fine: stile card pagina risultati
+*/
