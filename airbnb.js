@@ -2,38 +2,39 @@ const ALLOGGI = [
   {
     id: 1,
     images: [
-      {src: 'https://a0.muscache.com/im/pictures/miso/Hosting-1417807494670456186/original/c791bdb0-287e-4ce6-8c28-848028b34bc0.jpeg',
+      {src: 'https://a0.muscache.com/im/pictures/ec167b58-0af1-48c9-ab54-95ee074f5991.jpg',
         alt: 'Immagine 1'
       },
-      {src: 'https://a0.muscache.com/im/pictures/miso/Hosting-1417807494670456186/original/7e4fb49d-b19d-4d23-b9c1-6f9641dbb94d.jpeg',
+      {src: 'https://a0.muscache.com/im/pictures/40fe7bff-d0c3-4abc-985d-39d5f021e85f.jpg',
         alt: 'Immagine 2'
       },
-      {src: 'https://a0.muscache.com/im/pictures/miso/Hosting-1417807494670456186/original/125594a6-81e7-4e99-9e2a-07e63b8686c1.jpeg',
+      {src: 'https://a0.muscache.com/im/pictures/14472976/12c4cc0a_original.jpg',
         alt: 'Immagine 3'
       },
-      {src: 'https://a0.muscache.com/im/pictures/miso/Hosting-1417807494670456186/original/2cc1348d-0e7d-4d87-a209-33813a254353.jpeg',
+      {src: 'https://a0.muscache.com/im/pictures/ef169dcf-6a98-4f69-9876-4c275e67b73f.jpg',
         alt: 'Immagine 4'
       },
-      {src: 'https://a0.muscache.com/im/pictures/miso/Hosting-1417807494670456186/original/f5531cdd-b325-42da-b9b4-644abd2f9754.jpeg',
+      {src: 'https://a0.muscache.com/im/pictures/8f1d7a2f-c394-417e-99e3-8a98389103bd.jpg',
         alt: 'Immagine 5'
       },
-      {src: 'https://a0.muscache.com/im/pictures/miso/Hosting-1417807494670456186/original/12e5d53b-80bd-45f4-9f8b-318be28cb713.jpeg',
+      {src: 'https://a0.muscache.com/im/pictures/b0558e2d-cf3b-41b0-a6d8-1f88d548f948.jpg',
         alt: 'Immagine 6'
       },
-      {src: 'https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQxNzgwNzQ5NDY3MDQ1NjE4Ng==/original/15c1bc7c-bb69-4eb0-9607-d9f556cfe510.png',
+      {src: 'https://a0.muscache.com/im/pictures/14472811/9cb40999_original.jpg',
         alt: 'Immagine 7'
       }
     ],
     leftTextTitle: 'Appartamento &middot; Roma',
-    rightTextTitle: 'Nuovo',
-    description: 'Pigneto Nuova collezione 2',
-    places: '1 letto',
+    rightTextTitle: '4,91 (58)',
+    description: 'Affitto per vacanze zona San Pietro (4 posti letto)',
+    places: '2 letti',
     supplier: 'Host privato',
     cost: {
-      strong: '84 &euro;',
+      strikethrough: '178 &euro;',
+      strong: '118 &euro;',
       normal: 'notte'
     },
-    totalCost: '504 &euro; in totale'
+    totalCost: '469 &euro; in totale'
   },
   {
     id: 2,
@@ -229,7 +230,6 @@ const ALLOGGI = [
 
 
 // Gestione caricamento pagine
-const PATH_PAGINA_AIRBNB = "airbnbMioCSS.html";
 const PATH_PAGINA_HOME= "home.html";
 const PATH_PAGINA_RISULTATI = "risultati.html";
 const PATH_PAGINA_DETTAGLIO = "dettaglio.html";
@@ -247,7 +247,7 @@ function caricaPaginaDettaglio() {
 }
 
 function caricaPagina(pagina) {
-  window.location.replace(pagina);
+  window.location.href = pagina;
 }
 
 //js patrick
@@ -284,6 +284,13 @@ function decrementaOspite(type) {
     ospiti[type]--;
     document.getElementById(`${type}Count`).textContent = ospiti[type];
   }
+}
+
+
+//Gestione pagina risultati
+
+function avviaRicerca() {
+  caricaPaginaRisultati();
 }
 
 function loadResultsPage() {
