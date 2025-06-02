@@ -250,6 +250,24 @@ function caricaPagina(pagina) {
   window.location.replace(pagina);
 }
 
+//js patrick
+
+
+//funzione per lo scroll orizzontale tramitele frecce
+document.querySelectorAll('section').forEach(section => {
+    const scrollContainer = section.querySelector('.scroll-row');
+    const leftArrow = section.querySelector('.left-arrow');
+    const rightArrow = section.querySelector('.right-arrow');
+
+
+    leftArrow.addEventListener('click', () => {
+        scrollContainer.scrollBy({ left: -320, behavior: 'smooth' });
+    });
+
+    rightArrow.addEventListener('click', () => {
+        scrollContainer.scrollBy({ left: 320, behavior: 'smooth' });
+    });
+});
 const ospiti = {
   adulti: 2,
   bambini: 0,
