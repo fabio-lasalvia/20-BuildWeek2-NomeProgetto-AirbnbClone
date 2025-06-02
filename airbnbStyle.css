@@ -87,6 +87,10 @@ Inizio: stile card pagina risultati
   font-weight: bold;
 }
 
+#placeholderCard {
+  display: none;
+}
+
 .card-carousel.card {
     border: none !important;
     margin: 10px 0 20px 0;
@@ -139,6 +143,12 @@ Inizio: stile card pagina risultati
 .card-carousel .card-multi-text .strong {
     color: black;
     font-weight: bold;
+}
+
+.card-carousel .card-multi-text .strikethrough {
+    color: #6A6A6A;
+    text-decoration: line-through !important;
+    font-weight: 500;
 }
 
 .card-carousel .card-multi-text button {
