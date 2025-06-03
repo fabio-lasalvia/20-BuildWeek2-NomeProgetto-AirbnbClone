@@ -252,25 +252,27 @@ function caricaPagina(pagina) {
 
 //js patrick
 
-
 //funzione per lo scroll orizzontale tramitele frecce
-document.querySelectorAll('section').forEach(section => {
-    const scrollContainer = section.querySelector('.scroll-row');
-    const leftArrow = section.querySelector('.left-arrow');
-    const rightArrow = section.querySelector('.right-arrow');
+function horizontalScroll() {
+  document.querySelectorAll('section').forEach(section => {
+      const scrollContainer = section.querySelector('.scroll-row');
+      const leftArrow = section.querySelector('.left-arrow');
+      const rightArrow = section.querySelector('.right-arrow');
+  
+  
+      leftArrow.addEventListener('click', () => {
+          scrollContainer.scrollBy({ left: -320, behavior: 'smooth' });
+      });
+  
+      rightArrow.addEventListener('click', () => {
+          scrollContainer.scrollBy({ left: 320, behavior: 'smooth' });
+      });
+  });
+}
 
 
-    leftArrow.addEventListener('click', () => {
-        scrollContainer.scrollBy({ left: -320, behavior: 'smooth' });
-    });
-
-    rightArrow.addEventListener('click', () => {
-        scrollContainer.scrollBy({ left: 320, behavior: 'smooth' });
-    });
-});
 
 //Gestione pagina risultati
-
 function avviaRicerca() {
   caricaPaginaRisultati();
 }
