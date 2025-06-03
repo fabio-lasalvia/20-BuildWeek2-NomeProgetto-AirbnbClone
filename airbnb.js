@@ -268,24 +268,6 @@ document.querySelectorAll('section').forEach(section => {
         scrollContainer.scrollBy({ left: 320, behavior: 'smooth' });
     });
 });
-const ospiti = {
-  adulti: 2,
-  bambini: 0,
-  animaliDomestici: 0,
-};
-
-function incrementaOspite(type) {
-  ospiti[type]++;
-  document.getElementById(`${type}Count`).textContent = ospiti[type];
-}
-
-function decrementaOspite(type) {
-  if (ospiti[type] > 0) {
-    ospiti[type]--;
-    document.getElementById(`${type}Count`).textContent = ospiti[type];
-  }
-}
-
 
 //Gestione pagina risultati
 
@@ -393,5 +375,89 @@ function loadDetailPage() {
       container.appendChild(image);
       containerImages.appendChild(container);
     }
+  }
+}
+
+//SCRIPT PER SOVRASCRIVERE IL COMPORTAMENTO DI BOOTSTRAP CHE CHIUDE I DROPDOWN ITEM AL CLICK
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.dropdown-menu button').forEach(btn => {
+    btn.addEventListener('click', e => e.stopPropagation());
+  });
+});
+
+//FUNZIONALITÁ CALENDARI CHECK-IN E CHECK-OUT
+  let checkinDate = null;
+
+  // Picker Check-in
+  const checkinPicker = new Litepicker({
+  element: document.getElementById('litepicker-checkin'), // collega il picker all'elemento HTML con id "litepicker-checkin"
+  singleMode: true,              // consente di selezionare solo una data
+  numberOfMonths: 2,             // mostra 2 mesi affiancati nel calendario
+  numberOfColumns: 2,            // i mesi sono in 2 colonne (affiancati)
+  format: 'DD/MM/YYYY',          // formato visualizzato della data
+  autoApply: true,               // applica la selezione automaticamente senza cliccare "OK"
+  dropdowns: {
+    minYear: 2024,               // l'anno minimo selezionabile
+    maxYear: 2030,               // l'anno massimo selezionabile
+    months: true,                // abilita il menù a tendina per selezionare i mesi
+    years: true                  // abilita il menù a tendina per selezionare gli anni
+  }
+});
+
+
+  checkinPicker.on('selected', (date) => {
+  checkinDate = date; // salva la data selezionata come variabile globale
+  document.getElementById('checkin-display').value = date.format('DD/MM/YYYY');
+
+      // aggiorna il datepicker del checkout con minDate
+  checkoutPicker.setOptions({
+    minDate: checkinDate.add(1, 'day') // il giorno successivo al check-in
+  });
+
+      // se il check-out selezionato è prima del nuovo check-in, resetta
+  const currentCheckout = checkoutPicker.getDate();
+  if (currentCheckout && currentCheckout.isBefore(checkinDate, 'day')) {
+    document.getElementById('checkout-display').value = '';
+    checkoutPicker.clearSelection();
+  }
+});
+
+  // Picker Check-out
+  const checkoutPicker = new Litepicker({
+    element: document.getElementById('litepicker-checkout'), // collega il picker all'elemento HTML con id "litepicker-checkout"
+    singleMode: true,           // consente di selezionare solo una data
+    numberOfMonths: 2,          // mostra 2 mesi affiancati nel calendario
+    numberOfColumns: 2,         // i mesi sono in 2 colonne (affiancati)
+    format: 'DD/MM/YYYY',       // formato visualizzato della data
+    autoApply: true,            // applica la selezione automaticamente senza cliccare "OK"
+    dropdowns: {
+      minYear: 2024,            // l'anno minimo selezionabile
+      maxYear: 2030,            // l'anno massimo selezionabile
+      months: true,             // abilita il menù a tendina per selezionare i mesi
+      years: true               // abilita il menù a tendina per selezionare gli anni
+    }
+  });
+
+  //si aggiorna il campo checkout-display con la data formattata
+  checkoutPicker.on('selected', (date) => {
+    document.getElementById('checkout-display').value = date.format('DD/MM/YYYY');
+  });
+
+//FUNZIONALITÁ SEARCHBAR - SEZIONE "CHI"
+const ospiti = {
+  adulti: 2,
+  bambini: 0,
+  animaliDomestici: 0,
+};
+
+function incrementaOspite(type) {
+  ospiti[type]++;
+  document.getElementById(`${type}Count`).textContent = ospiti[type];
+}
+
+function decrementaOspite(type) {
+  if (ospiti[type] > 0) {
+    ospiti[type]--;
+    document.getElementById(`${type}Count`).textContent = ospiti[type];
   }
 }
